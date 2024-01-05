@@ -53,10 +53,14 @@
   </section> 
   -->
 
-  <section id="about" class="mt-24 mb-16">
+  <section id="about" class="mt-8 mb-16">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">About</h2>
       <!-- <p class="my-4">George started in construction in 2010?....</p> -->
+      <p class="my-4 text-lg">
+        Marksman Exteriors specializes in one thing:
+        <em> exterior access to your home. </em>
+      </p>
       <p class="my-4">
         At Marksman Exteriors, we understand the importance of windows and doors
         as essential components of any building's aesthetic appeal,
