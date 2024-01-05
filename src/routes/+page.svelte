@@ -1,8 +1,4 @@
 <script lang="ts">
-  import Card from "$lib/Card.svelte";
-  import MdiHouseSiding from "$lib/icons/house_siding_FILL0_wght400_GRAD0_opsz24.svg";
-  import MdiCountertops from "$lib/icons/countertops_FILL0_wght400_GRAD0_opsz24.svg";
-  import MdiDoorOpen from "$lib/icons/door_open_FILL0_wght400_GRAD0_opsz24.svg";
   import Google from "$lib/icons/google.svg";
   import Yelp from "$lib/icons/yelp_burst.svg";
   import SEO from "$lib/SEO/MetaTags.svelte";
