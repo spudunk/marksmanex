@@ -41,6 +41,7 @@
       </h1>
     </div>
   </section>
+  <!--   
   <section id="services" class="">
     <div class="container w-full">
       <h2 class="text-3xl my-4 font-display">Windows & Doors</h2>
@@ -49,7 +50,8 @@
         home.
       </p>
     </div>
-  </section>
+  </section> 
+  -->
 
   <section id="about" class="mt-24 mb-16">
     <div class="container">
