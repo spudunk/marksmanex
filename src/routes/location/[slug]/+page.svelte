@@ -130,13 +130,13 @@
       </p>
     </div>
   </section>
-
+<!-- 
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <!-- <Carousel {images} /> -->
+      <Carousel {images} />
     </div>
-  </section>
+  </section> -->
 
   <section id="contact" class="my-16">
     <div class="container">
