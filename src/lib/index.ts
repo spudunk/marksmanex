@@ -14,7 +14,7 @@ export const site = {
   company: {
     name: "Marksman Exteriors",
     legalName: "Marksman Exteriors LLC",
-    email: "george@marksmanexteriors.com",
+    email: "georgeb@marksmanexteriors.com",
     areaServed: "Portland, OR",
     telephone: "+12182009998",
     telephoneText: "(218) 200-9998",
