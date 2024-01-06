@@ -19,17 +19,9 @@
     class="container w-full grid grid-cols-nav justify-between items-center py-2 min-h-12"
   >
     <a href="/" class="flex gap-2 items-center">
-      <!-- 
-        <Logo
-          class={`fill-white text-white transition-all duration-200 ${
-            expand ? "h-16 sm:h-24" : "h-[var(--nav-height)]"
-          } 
-        `}
-        /> 
-      -->
-      LOGO
-      <span class="text-2xl text-white hidden md:inline-block"
-        >{site.company.name}</span
+      <img src="/logo.svg" alt="Logo">
+      <!-- <span class="text-2xl text-white hidden md:inline-block"
+        >{site.company.name}</span -->
       >
     </a>
     <div></div>
