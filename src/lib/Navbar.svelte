@@ -19,10 +19,7 @@
     class="container w-full grid grid-cols-nav justify-between items-center py-2 min-h-12"
   >
     <a href="/" class="flex gap-2 items-center">
-      <img src="/logo.svg" alt="Logo">
-      <!-- <span class="text-2xl text-white hidden md:inline-block"
-        >{site.company.name}</span -->
-      >
+      <img class="h-12 w-auto" src="/logo.svg" alt="Logo">
     </a>
     <div></div>
 
