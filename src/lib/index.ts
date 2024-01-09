@@ -1,11 +1,17 @@
 // place files you want to import through the `$lib` alias in this folder.
 import type { Thing, WithContext, Organization, WebSite } from "schema-dts";
+import googleIcon from "$lib/icons/google.svg";
+import yelpIcon from "$lib/icons/yelp_burst.svg";
+import facebookIcon from "$lib/icons/facebook.svg";
+import googleMapsIcon from "$lib/icons/google-maps.svg";
 
 export const site = {
   url: "https://marksmanexteriors.com/",
   title: "Marksman Exteriors - Woodburn Windows & Doors Contractor",
-  heading: "",
-  subheading: "",
+  description:
+    "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodland and surrounding areas.", // xxx words
+  heading: "Unparalleled Windows and Doors Contractor",
+  subheading: "Quality that Shines",
   about: [
     "At Marksman Exteriors, we understand the importance of windows and doors as essential components of any building's aesthetic appeal, functionality, and energy efficiency. That's why we take pride in our ability to transform spaces through high-quality installations and meticulous attention to detail. Our team of skilled professionals is dedicated to delivering the finest workmanship, ensuring that your windows and doors not only enhance the appearance of your home but also provide durability and security.",
     "We prioritize customer satisfaction above all else. We take the time to listen to your specific requirements, working closely with you to develop a customized solution that aligns perfectly with your vision. Our dedication to open communication, transparency, and reliable timelines ensures a stress-free experience throughout the entire renovation process.",
@@ -27,43 +33,107 @@ export const site = {
     text: "OR LIC No. 238815",
     url: "https://search.ccb.state.or.us/search/search_result.aspx?id=238815",
   },
-
-  description: "Marksman Exteriors LLC", // xxx words
   social: {
     facebook: "",
-    yelp: "https://www.yelp.com/biz/marksman-exteriors-silverton",
-    google:
-      "https://www.google.com/search?q=marksman+exteriors+llc+woodburn+or",
+    yelp: "https://www.yelp.com/biz/marksman-exteriors-silverton/",
+    google: "",
     googleMaps: "",
   },
 };
 
 export const locations: Locations = {
   portland: {
-    heading: "Portland Windows & Doors Contractor",
+    name: "Portland",
+    heading: `Portland's Superior Windows & Doors Contractor`,
+    title: "Marksman Exteriors - Portland Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Portland and surrounding areas.",
+    areaServed: "Portland, OR",
   },
   lakeoswego: {
-    heading: "Lake Oswego Windows & Doors Contractor",
+    name: "Lake Oswego",
+    heading: "Lake Oswego's Trusted Windows & Doors Contractor",
+    title: "Marksman Exteriors - Lake Oswego Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Lake Oswego, OR.",
+    areaServed: "Lake Oswego, OR",
   },
   beaverton: {
-    heading: "Beaverton Windows & Doors Contractor",
+    name: "Beaverton",
+    heading: "Beaverton's Superior Windows & Doors Contractor",
+    title: "Marksman Exteriors - Beaverton Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Beaverton, OR.",
+    areaServed: "Beaverton, OR",
   },
   wilsonville: {
-    heading: "Wilsonville Windows & Doors Contractor",
+    name: "Wilsonville",
+    heading: "Wilsonville's Best Windows & Doors Contractor",
+    title: "Marksman Exteriors - Wilsonville Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Wilsonville, OR.",
+    areaServed: "Wilsonville, OR",
   },
   woodburn: {
-    heading: "Woodburn Windows & Doors Contractor",
+    name: "Woodburn",
+    heading: "Woodburn's Superior Windows & Doors Contractor",
+    title: "Marksman Exteriors - Woodburn Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodburn, OR.",
+    areaServed: "Woodburn, OR",
   },
   salem: {
-    heading: "Salem Windows & Doors Contractor",
+    name: "Salem",
+    heading: "Salem's Best Windows & Doors Contractor",
+    title: "Marksman Exteriors - Salem Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Salem and surrounding areas.",
+    areaServed: "Salem, OR",
   },
   albany: {
-    heading: "Albany Windows & Doors Contractor",
+    name: "Albany",
+    heading: "Albany's Best Windows & Doors Contractor",
+    title: "Marksman Exteriors - Albany Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Albany, OR.",
+    areaServed: "Albany, OR",
   },
   corvallis: {
-    heading: "Corvallis Windows & Doors Contractor",
+    name: "Corvallis",
+    heading: "Corvallis' Superior Windows & Doors Contractor",
+    title: "Marksman Exteriors - Corvallis Windows & Doors Contractor",
+    description:
+      "Marksman Exteriors LLC - Windows and Doors Contractor serving Corvallis, OR.",
+    areaServed: "Corvallis, OR",
   },
 };
+
+export const socialLinks = [
+  {
+    name: "Facebook",
+    icon: facebookIcon,
+    iconAlt: "Facebook Icon",
+    href: site.social.facebook,
+  },
+  {
+    name: "Yelp",
+    icon: yelpIcon,
+    iconAlt: "Yelp Icon",
+    href: site.social.yelp,
+  },
+  {
+    name: "Google",
+    icon: googleIcon,
+    iconAlt: "Google Icon",
+    href: site.social.google,
+  },
+  {
+    name: "Google Maps",
+    icon: googleMapsIcon,
+    iconAlt: "Google Maps Icon",
+    href: site.social.googleMaps,
+  },
+];
 
 export const organizationSchema: WithContext<Organization> = {
   "@context": "https://schema.org",
@@ -103,7 +173,13 @@ export function serializeSchema(thing: Schema) {
 }
 
 export type Schema = Thing | WithContext<Thing>;
-export type Image = { id: string; path: string | URL; alt: string };
+export type Image = { id: string; path: string; alt: string };
 
-type Location = { heading: string };
+type Location = {
+  name: string;
+  heading: string;
+  title: string;
+  description: string;
+  areaServed: string;
+};
 type Locations = { [key: string]: Location };

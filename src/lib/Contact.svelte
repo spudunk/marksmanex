@@ -3,19 +3,19 @@
 </script>
 
 <div class="flex flex-col gap-4">
-  <p class="text-lg">Call or Email to start improving your home today.</p>
-  <p class="text-xl">
+  <p class="sm:text-lg">Call or Email to start improving your home today.</p>
+  <p class="sm:text-xl break-words">
     Email: <a
-      class="link p-1"
+      class="link py-1 mx-1"
       target="_blank"
       href={`mailto:${site.company.email}`}
     >
       {site.company.email}
     </a>
   </p>
-  <p class="text-xl">
+  <p class="sm:text-xl">
     Phone: <a
-      class="link p-1"
+      class="link py-1 mx-1"
       target="_blank"
       href={`tel:${site.company.telephone}`}
     >

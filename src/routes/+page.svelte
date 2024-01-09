@@ -1,17 +1,24 @@
 <script lang="ts">
   import Google from "$lib/icons/google.svg";
   import Yelp from "$lib/icons/yelp_burst.svg";
-  import SEO from "$lib/SEO/MetaTags.svelte";
+  import MetaTags from "$lib/SEO/MetaTags.svelte";
+  import LdTag from "$lib/SEO/LDTag.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import Contact from "$lib/Contact.svelte";
-  import { site } from "$lib";
+  import { site, organizationSchema, websiteSchema } from "$lib";
   import type { Image } from "$lib";
+  import Navbar from "$lib/Navbar.svelte";
 
-  const images: Image[] = [{ id: "", path: "", alt: "" }];
+  const images: Image[] = [
+    { id: "1", path: "", alt: "" },
+  ];
 </script>
 
-<SEO />
+<MetaTags />
+<LdTag schema={organizationSchema} />
+<LdTag schema={websiteSchema} />
 
+<Navbar hero />
 <main class="relative">
   <section
     id="hero"
@@ -30,10 +37,10 @@
         {site.company.name}
       </p>
       <p class="text-3xl sm:text-4xl md:text-5xl text-neutral-200">
-        Quality that Shines
+        {site.subheading}
       </p>
       <h1 class="text-xl sm:text-2xl md:text-3xl text-neutral-200">
-        Unparalleled Windows and Doors Contractor
+        {site.heading}
       </h1>
     </div>
   </section>
@@ -63,38 +70,6 @@
         </p>
       {/each}
 
-      <!-- 
-      <div
-        class="text-lg px-2 py-2 rounded bg-neutral-200 flex flex-col gap-2 font-serif"
-      >
-        <p class="relative ml-4">
-          <span class="text-2xl h-2 inline-block absolute -left-4">&ldquo;</span
-          >
-          I was tired of seeing customers get screwed by contractors. It’s all about
-          the customer for me.
-        </p>
-        <p class="ml-4">
-          I don’t have a single CCB complaint. I acknowledge my mistakes and
-          work to make things right. I don’t leave until they’re happy.
-        </p>
-        <p class="font-bold text-green-900 text-xl ml-4">
-          I’d rather lose money than leave an unhappy customer.
-        </p>
-        <p class="ml-4">
-          The damage to my reputation is just not worth it.
-          <span class="text-2xl h-2 inline-block"> &rdquo; </span>
-        </p>
-        <p class="font-bol ml-4">- Mike Shurts</p>
-      </div>
-       -->
-      <!-- 
-      <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
-        <img class="h-6 inline-block" src={Google} alt="Google logo" />
-        <a target="_blank" class="link p-2" href={site.social.google}>
-          Google Reviews
-        </a>
-      </p>
-       -->
       <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
         <img class="h-6 inline-block" src={Yelp} alt="Yelp logo" />
         <a
@@ -107,13 +82,13 @@
       </p>
     </div>
   </section>
-  <!-- 
+
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
       <Carousel {images} />
     </div>
-  </section> -->
+  </section>
 
   <section id="contact" class="my-16">
     <div class="container">

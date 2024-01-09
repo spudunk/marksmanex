@@ -1,20 +1,32 @@
 <script lang="ts">
   import type { PageData } from "./$types";
+  import type { Organization } from "schema-dts";
+
   export let data: PageData;
 
   import Google from "$lib/icons/google.svg";
   import Yelp from "$lib/icons/yelp_burst.svg";
   import SEO from "$lib/SEO/MetaTags.svelte";
+  import LdTag from "$lib/SEO/LDTag.svelte";
 
   import Contact from "$lib/Contact.svelte";
-  import { site } from "$lib";
+  import { site, organizationSchema, websiteSchema } from "$lib";
   import type { Image } from "$lib";
+  import Navbar from "$lib/Navbar.svelte";
 
   const images: Image[] = [{ id: "", path: "", alt: "" }];
+
+  const orgSchema = {
+    ...(organizationSchema as Object),
+    areaServed: data.areaServed,
+  } as Organization;
 </script>
 
-<SEO />
+<SEO description={data.description} title={data.title} />
+<LdTag schema={orgSchema} />
+<LdTag schema={websiteSchema} />
 
+<Navbar hero />
 <main class="relative">
   <section
     id="hero"
