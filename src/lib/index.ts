@@ -18,6 +18,8 @@ export const site = {
     "We prioritize customer satisfaction above all else. We take the time to listen to your specific needs, working closely with you to develop a solution that aligns perfectly with your vision. Our dedication to open communication, transparency, and reliable timelines ensures a stress-free experience throughout the entire renovation process.",
     "When you choose Marksman Exteriors as your trusted contractor, you can rest assured that your project will be handled with the utmost care and expertise, while saving thousands compared to the big name companies. Contact us today to schedule an estimate and let us elevate the beauty, comfort, and value of your home through our exceptional windows and doors services.",
   ],
+  servicesCopy:
+    "Windows and doors not only provide aesthetics but also serve as critical points of insulation and protection against external elements. Improper installation can lead to air and water leakages, causing energy inefficiency, increased utility bills, and damage to the interior. A professional installation guarantees a tight, secure fit, maximizing energy efficiency and preventing moisture infiltration.",
   company: {
     name: "Marksman Exteriors",
     legalName: "Marksman Exteriors LLC",
@@ -66,6 +68,35 @@ export const socialLinks = [
     icon: googleMapsIcon,
     iconAlt: "Google Maps Icon",
     href: site.social.googleMaps,
+  },
+];
+
+export const galleryImages: Image[] = [
+  { id: "1", path: "/images/gallery/20220510_155930.jpg", alt: "" },
+  { id: "2", path: "/images/gallery/20220511_155429.jpg", alt: "" },
+  { id: "3", path: "/images/gallery/20220511_155436.jpg", alt: "" },
+  { id: "4", path: "/images/gallery/20220614_121523.jpg", alt: "" },
+  { id: "5", path: "/images/gallery/20220621_144733.jpg", alt: "" },
+  { id: "6", path: "/images/gallery/20220809_140939.jpg", alt: "" },
+  { id: "7", path: "/images/gallery/20220812_133111.jpg", alt: "" },
+  { id: "8", path: "/images/gallery/20221115_170243.jpg", alt: "" },
+  { id: "9", path: "/images/gallery/20230227_124116.jpg", alt: "" },
+  { id: "10", path: "/images/gallery/20230301_160546.jpg", alt: "" },
+  // { id: "11", path: "/images/gallery/20230306_094930.jpg", alt: "" },
+  { id: "12", path: "/images/gallery/20230306_144155.jpg", alt: "" },
+  { id: "13", path: "/images/gallery/20230404_140542.jpg", alt: "" },
+  { id: "14", path: "/images/gallery/20230412_164505.jpg", alt: "" },
+  { id: "15", path: "/images/gallery/20230425_135058.jpg", alt: "" },
+  { id: "16", path: "/images/gallery/20230425_135103.jpg", alt: "" },
+  { id: "17", path: "/images/gallery/20230425_135110.jpg", alt: "" },
+  { id: "18", path: "/images/gallery/20230425_135143.jpg", alt: "" },
+  { id: "19", path: "/images/gallery/20230425_135151.jpg", alt: "" },
+  { id: "20", path: "/images/gallery/20231106_155205.jpg", alt: "" },
+  { id: "21", path: "/images/gallery/20231106_155215.jpg", alt: "" },
+  {
+    id: "22",
+    path: "/images/gallery/Screenshot_20230627_203955_Messages.jpg",
+    alt: "",
   },
 ];
 

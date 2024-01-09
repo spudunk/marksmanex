@@ -5,12 +5,8 @@
   import LdTag from "$lib/SEO/LDTag.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import Contact from "$lib/Contact.svelte";
-  import { site, organizationSchema, websiteSchema } from "$lib";
-  import type { Image } from "$lib";
+  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
-
-  const images: Image[] = [
-  ];
 </script>
 
 <MetaTags />
@@ -48,12 +44,7 @@
     <div class="container w-full">
       <h2 class="text-3xl my-4 font-display">Benefits</h2>
       <p>
-        Windows and doors not only provide aesthetics but also serve as critical
-        points of insulation and protection against external elements. Improper
-        installation can lead to air and water leakages, causing energy
-        inefficiency, increased utility bills, and damage to the interior. A
-        professional installation guarantees a tight, secure fit, maximizing
-        energy efficiency and preventing moisture infiltration.
+        {@html site.servicesCopy}
       </p>
     </div>
   </section>
@@ -69,6 +60,15 @@
           {@html p}
         </p>
       {/each}
+
+      <!-- 
+      <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
+        <img class="h-6 inline-block" src={Google} alt="Google logo" />
+        <a target="_blank" class="link p-2" href={site.social.google}>
+          Google Reviews
+        </a>
+      </p>
+       -->
 
       <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
         <img class="h-6 inline-block" src={Yelp} alt="Yelp logo" />
@@ -86,7 +86,7 @@
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <Carousel {images} />
+      <!-- <Carousel debug images={galleryImages} /> -->
     </div>
   </section>
 

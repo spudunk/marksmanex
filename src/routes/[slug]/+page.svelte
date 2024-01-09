@@ -10,9 +10,10 @@
   import LdTag from "$lib/SEO/LDTag.svelte";
 
   import Contact from "$lib/Contact.svelte";
-  import { site, organizationSchema, websiteSchema } from "$lib";
+  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
   import type { Image } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
+  import Carousel from "$lib/Carousel.svelte";
 
   const images: Image[] = [{ id: "", path: "", alt: "" }];
 
@@ -52,17 +53,15 @@
       </h1>
     </div>
   </section>
-  <!--   
+
   <section id="services" class="">
     <div class="container w-full">
-      <h2 class="text-3xl my-4 font-display">Windows & Doors</h2>
+      <h2 class="text-3xl my-4 font-display">Benefits</h2>
       <p>
-        Marksman Exteriors specializes in one thing: exterior access to your
-        home.
+        {@html site.servicesCopy}
       </p>
     </div>
   </section>
-  -->
 
   <section id="about" class="mt-8 mb-16">
     <div class="container">
@@ -78,30 +77,6 @@
       {/each}
 
       <!-- 
-      <div
-        class="text-lg px-2 py-2 rounded bg-neutral-200 flex flex-col gap-2 font-serif"
-      >
-        <p class="relative ml-4">
-          <span class="text-2xl h-2 inline-block absolute -left-4">&ldquo;</span
-          >
-          I was tired of seeing customers get screwed by contractors. It’s all about
-          the customer for me.
-        </p>
-        <p class="ml-4">
-          I don’t have a single CCB complaint. I acknowledge my mistakes and
-          work to make things right. I don’t leave until they’re happy.
-        </p>
-        <p class="font-bold text-green-900 text-xl ml-4">
-          I’d rather lose money than leave an unhappy customer.
-        </p>
-        <p class="ml-4">
-          The damage to my reputation is just not worth it.
-          <span class="text-2xl h-2 inline-block"> &rdquo; </span>
-        </p>
-        <p class="font-bol ml-4">- Mike Shurts</p>
-      </div>
-       -->
-      <!-- 
       <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
         <img class="h-6 inline-block" src={Google} alt="Google logo" />
         <a target="_blank" class="link p-2" href={site.social.google}>
@@ -109,6 +84,7 @@
         </a>
       </p>
        -->
+
       <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
         <img class="h-6 inline-block" src={Yelp} alt="Yelp logo" />
         <a
@@ -121,13 +97,13 @@
       </p>
     </div>
   </section>
-  <!-- 
+
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <Carousel {images} />
+      <!-- <Carousel debug images={galleryImages} /> -->
     </div>
-  </section> -->
+  </section>
 
   <section id="contact" class="my-16">
     <div class="container">
