@@ -13,9 +13,10 @@ export const site = {
   heading: "Unparalleled Windows and Doors Contractor",
   subheading: "Quality that Shines",
   about: [
-    "At Marksman Exteriors, we understand the importance of windows and doors as essential components of any building's aesthetic appeal, functionality, and energy efficiency. That's why we take pride in our ability to transform spaces through high-quality installations and meticulous attention to detail. Our team of skilled professionals is dedicated to delivering the finest workmanship, ensuring that your windows and doors not only enhance the appearance of your home but also provide durability and security.",
-    "We prioritize customer satisfaction above all else. We take the time to listen to your specific requirements, working closely with you to develop a customized solution that aligns perfectly with your vision. Our dedication to open communication, transparency, and reliable timelines ensures a stress-free experience throughout the entire renovation process.",
-    "When you choose Marksman Exteriors as your trusted contractor, you can rest assured that your project will be handled with the utmost care and expertise. Contact us today to schedule a consultation and let us elevate the beauty, comfort, and value of your home through our exceptional windows and doors services.",
+    "Marksman Exteriors specializes in two things: <em> Top notch quality and superior customer satisfaction. </em>",
+    "At Marksman Exteriors, we understand the importance of windows and doors as essential components of any building's aesthetic appeal, functionality, and energy efficiency. That's why we take pride in our ability to transform spaces through high-quality installations and our attention to detail. Our team of skilled professionals is dedicated to delivering the finest workmanship, ensuring that your windows and doors not only enhance the appearance of your home but also provide durability and security.",
+    "We prioritize customer satisfaction above all else. We take the time to listen to your specific needs, working closely with you to develop a solution that aligns perfectly with your vision. Our dedication to open communication, transparency, and reliable timelines ensures a stress-free experience throughout the entire renovation process.",
+    "When you choose Marksman Exteriors as your trusted contractor, you can rest assured that your project will be handled with the utmost care and expertise, while saving thousands compared to the big name companies. Contact us today to schedule an estimate and let us elevate the beauty, comfort, and value of your home through our exceptional windows and doors services.",
   ],
   company: {
     name: "Marksman Exteriors",
@@ -40,6 +41,33 @@ export const site = {
     googleMaps: "",
   },
 };
+
+export const socialLinks = [
+  {
+    name: "Facebook",
+    icon: facebookIcon,
+    iconAlt: "Facebook Icon",
+    href: site.social.facebook,
+  },
+  {
+    name: "Yelp",
+    icon: yelpIcon,
+    iconAlt: "Yelp Icon",
+    href: site.social.yelp,
+  },
+  {
+    name: "Google",
+    icon: googleIcon,
+    iconAlt: "Google Icon",
+    href: site.social.google,
+  },
+  {
+    name: "Google Maps",
+    icon: googleMapsIcon,
+    iconAlt: "Google Maps Icon",
+    href: site.social.googleMaps,
+  },
+];
 
 export const locations: Locations = {
   portland: {
@@ -107,33 +135,6 @@ export const locations: Locations = {
     areaServed: "Corvallis, OR",
   },
 };
-
-export const socialLinks = [
-  {
-    name: "Facebook",
-    icon: facebookIcon,
-    iconAlt: "Facebook Icon",
-    href: site.social.facebook,
-  },
-  {
-    name: "Yelp",
-    icon: yelpIcon,
-    iconAlt: "Yelp Icon",
-    href: site.social.yelp,
-  },
-  {
-    name: "Google",
-    icon: googleIcon,
-    iconAlt: "Google Icon",
-    href: site.social.google,
-  },
-  {
-    name: "Google Maps",
-    icon: googleMapsIcon,
-    iconAlt: "Google Maps Icon",
-    href: site.social.googleMaps,
-  },
-];
 
 export const organizationSchema: WithContext<Organization> = {
   "@context": "https://schema.org",

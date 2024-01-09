@@ -69,12 +69,11 @@
       <h2 class="text-3xl mb-4 font-display">About</h2>
       <!-- <p class="my-4">George started in construction in 2010?....</p> -->
       <p class="my-4 text-lg">
-        Marksman Exteriors specializes in one thing:
-        <em> exterior access to your home. </em>
+        {@html site.about[0]}
       </p>
-      {#each site.about as p}
+      {#each site.about.slice(1) as p}
         <p class="my-4">
-          {p}
+          {@html p}
         </p>
       {/each}
 

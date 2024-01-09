@@ -10,7 +10,6 @@
   import Navbar from "$lib/Navbar.svelte";
 
   const images: Image[] = [
-    { id: "1", path: "", alt: "" },
   ];
 </script>
 
@@ -44,29 +43,30 @@
       </h1>
     </div>
   </section>
-  <!--   
+
   <section id="services" class="">
     <div class="container w-full">
-      <h2 class="text-3xl my-4 font-display">Windows & Doors</h2>
+      <h2 class="text-3xl my-4 font-display">Benefits</h2>
       <p>
-        Marksman Exteriors specializes in one thing: exterior access to your
-        home.
+        Windows and doors not only provide aesthetics but also serve as critical
+        points of insulation and protection against external elements. Improper
+        installation can lead to air and water leakages, causing energy
+        inefficiency, increased utility bills, and damage to the interior. A
+        professional installation guarantees a tight, secure fit, maximizing
+        energy efficiency and preventing moisture infiltration.
       </p>
     </div>
-  </section> 
-  -->
+  </section>
 
   <section id="about" class="mt-8 mb-16">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">About</h2>
-      <!-- <p class="my-4">George started in construction in 2010?....</p> -->
       <p class="my-4 text-lg">
-        Marksman Exteriors specializes in one thing:
-        <em> exterior access to your home. </em>
+        {@html site.about.shift()}
       </p>
       {#each site.about as p}
         <p class="my-4">
-          {p}
+          {@html p}
         </p>
       {/each}
 
