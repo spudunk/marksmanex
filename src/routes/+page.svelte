@@ -53,9 +53,9 @@
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">About</h2>
       <p class="my-4 text-lg">
-        {@html site.about.shift()}
+        {@html site.about[0]}
       </p>
-      {#each site.about as p}
+      {#each site.about.slice(1) as p}
         <p class="my-4">
           {@html p}
         </p>

@@ -66,7 +66,6 @@
   <section id="about" class="mt-8 mb-16">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">About</h2>
-      <!-- <p class="my-4">George started in construction in 2010?....</p> -->
       <p class="my-4 text-lg">
         {@html site.about[0]}
       </p>
