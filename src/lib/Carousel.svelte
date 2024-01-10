@@ -22,7 +22,11 @@
       ? (scrollIndex = scrollIndex % images.length)
       : (scrollIndex = images.length - 1);
     const child = images[scrollIndex];
-    child.scrollIntoView({ block: "nearest" });
+    child.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
     timeoutIndex = setTimeout(() => {
       allowEvent = true;
     }, scrollTimeout);
@@ -39,7 +43,7 @@
 </script>
 
 <div class="relative overflow-hidden" bind:this={container}>
-  <div class="absolute top-0 left-0 z-10 p-4">
+  <div class="absolute top-0 left-0 z-50 p-4">
     <button
       class="text-xl font-bold text-black py-1 px-2 bg-neutral-300 bg-opacity-80 rounded"
       on:click={(e) => {
@@ -76,7 +80,9 @@
         }}
       >
         {#if debug}
-          <span class="absolute top-2 left-0 p-1 z-10 bg-neutral-50 bg-opacity-80">
+          <span
+            class="absolute top-2 left-0 p-1 z-10 bg-neutral-50 bg-opacity-80"
+          >
             {image.id}
           </span>
         {/if}
