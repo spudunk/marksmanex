@@ -42,7 +42,8 @@
   };
 </script>
 
-<div class="relative overflow-hidden" bind:this={container}>
+<div class="relative overflow-x-clip h-60 md:h-72 lg:h-80" bind:this={container}>
+
   <div class="absolute top-0 left-0 z-50 p-4">
     <button
       class="text-xl font-bold text-black py-1 px-2 bg-neutral-300 bg-opacity-80 rounded"
@@ -66,12 +67,15 @@
       &rightarrow;
     </button>
   </div>
+
+
   <div
-    class="scroll-smooth overflow-x-auto flex gap-4 w-fit"
+    class="absolute top-0 left-0 scroll-smooth overflow-x-auto flex gap-4 w-fit"
     bind:this={carousel}
     on:scroll={setScrollPosition}
   >
     {#each images as image (image.id)}
+
       <button
         class="relative block min-w-fit ml-2"
         on:click={() => {
@@ -94,9 +98,13 @@
           class="h-60 md:h-72 lg:h-80 min-w-fit rounded"
         />
       </button>
+
     {/each}
   </div>
 </div>
+
+
+
 
 {#if selected}
   <button
