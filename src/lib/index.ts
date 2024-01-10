@@ -75,29 +75,29 @@ export const socialLinks = [
 export const imagePath = "https://imagedelivery.net/XvH0UEoGmg1LgCBcC8XRgw/";
 
 export const galleryImages: Image[] = [
-  { id: "e0d6195b-006c-4c77-515d-2669faf70500", alt: "" }, // 2
-  { id: "a24250b0-223a-4707-dbca-6e032cba8f00", alt: "" }, // 5
-  { id: "d0a75ed9-df19-4ace-cf5a-c95de394b700", alt: "" }, // 1
-  { id: "07aa8e7a-30cc-4da8-f2d8-e3c6582c4d00", alt: "" }, // 13
-  { id: "13645df5-b7d5-4055-0b10-ce5b6f753700", alt: "" }, // 19
-  { id: "b15a9a15-5d99-408c-2a43-e2ea7ae63a00", alt: "" }, // 7
-  { id: "5332a5f3-44db-46e3-71aa-bdca66feca00", alt: "" }, // 16
-  { id: "47705321-788a-4ebb-7104-7869c32f5200", alt: "" }, // 15
-  { id: "fdcb0490-7603-44a3-713b-847f5eb78400", alt: "" }, // 11
-  { id: "9075443c-0eaa-4cd0-db1f-5e697d500500", alt: "" }, // 8
-  { id: "22217e35-4c49-4fce-54ce-f305cef7a600", alt: "" }, // 20
-  { id: "7324ec20-483e-418a-9ac3-bd7125a55c00", alt: "" }, // 12
-  { id: "d36ca3e8-f64e-4a8f-9aef-911bcf8aa000", alt: "" }, // 3
-  { id: "a754bed3-68dd-4463-879f-896e1f0dc400", alt: "" }, // 9
-  { id: "9987a414-78f8-4469-64e0-8590c0b89300", alt: "" }, // 10
-  { id: "07c18bf0-a466-4e7e-fcb9-48adbd1e1800", alt: "" }, // 18
-  { id: "622bfd28-ac3e-4ec5-f780-cad7f393d800", alt: "" }, // 4
-  { id: "586d7ca0-679b-48ac-a753-ce2f2b9a3300", alt: "" }, // 14
-  { id: "89b3349b-a9d9-4386-db23-90dac149ed00", alt: "" }, // 21
-  { id: "54410a95-3cfc-4e42-dc3f-dffe3dc50900", alt: "" }, // 6
-  { id: "0fc1d3ab-15cd-467d-58f5-3495b59dd300", alt: "" }, // 17
-  { id: "69c25642-5bd1-4d6e-32df-420506cf8d00", alt: "" }, // 22
-  { id: "8d1dfa22-0e73-40e2-2edf-3218fede6400", alt: "" }, // 23
+  { id: "8d1dfa22-0e73-40e2-2edf-3218fede6400", alt: "work sample" }, // 23
+  { id: "69c25642-5bd1-4d6e-32df-420506cf8d00", alt: "work sample" }, // 22
+  { id: "e0d6195b-006c-4c77-515d-2669faf70500", alt: "work sample" }, // 2
+  { id: "a24250b0-223a-4707-dbca-6e032cba8f00", alt: "work sample" }, // 5
+  { id: "d0a75ed9-df19-4ace-cf5a-c95de394b700", alt: "work sample" }, // 1
+  { id: "07aa8e7a-30cc-4da8-f2d8-e3c6582c4d00", alt: "work sample" }, // 13
+  { id: "13645df5-b7d5-4055-0b10-ce5b6f753700", alt: "work sample" }, // 19
+  { id: "b15a9a15-5d99-408c-2a43-e2ea7ae63a00", alt: "work sample" }, // 7
+  { id: "5332a5f3-44db-46e3-71aa-bdca66feca00", alt: "work sample" }, // 16
+  { id: "47705321-788a-4ebb-7104-7869c32f5200", alt: "work sample" }, // 15
+  { id: "fdcb0490-7603-44a3-713b-847f5eb78400", alt: "work sample" }, // 11
+  { id: "9075443c-0eaa-4cd0-db1f-5e697d500500", alt: "work sample" }, // 8
+  { id: "22217e35-4c49-4fce-54ce-f305cef7a600", alt: "work sample" }, // 20
+  { id: "7324ec20-483e-418a-9ac3-bd7125a55c00", alt: "work sample" }, // 12
+  { id: "d36ca3e8-f64e-4a8f-9aef-911bcf8aa000", alt: "work sample" }, // 3
+  { id: "a754bed3-68dd-4463-879f-896e1f0dc400", alt: "work sample" }, // 9
+  { id: "9987a414-78f8-4469-64e0-8590c0b89300", alt: "work sample" }, // 10
+  { id: "07c18bf0-a466-4e7e-fcb9-48adbd1e1800", alt: "work sample" }, // 18
+  { id: "622bfd28-ac3e-4ec5-f780-cad7f393d800", alt: "work sample" }, // 4
+  { id: "586d7ca0-679b-48ac-a753-ce2f2b9a3300", alt: "work sample" }, // 14
+  { id: "89b3349b-a9d9-4386-db23-90dac149ed00", alt: "work sample" }, // 21
+  { id: "54410a95-3cfc-4e42-dc3f-dffe3dc50900", alt: "work sample" }, // 6
+  { id: "0fc1d3ab-15cd-467d-58f5-3495b59dd300", alt: "work sample" }, // 17
 ];
 
 export const locations: Locations = {

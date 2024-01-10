@@ -76,8 +76,9 @@
         }}
       >
         {#if debug}
-          <span class="absolute top-2 left-2 p-1 bg-neutral-50">{image.id}</span
-          >
+          <span class="absolute top-2 left-0 p-1 z-10 bg-neutral-50 bg-opacity-80">
+            {image.id}
+          </span>
         {/if}
         <img
           loading="lazy"
@@ -97,7 +98,6 @@
     on:click={() => {
       selected = undefined;
       document.body.style.overflow = "visible";
-
     }}
   >
     <img
