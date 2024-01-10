@@ -20,7 +20,7 @@
     <a
       target="_blank"
       class="link p-2"
-      href={`${site.social.facebook}/reviews`}
+      href={`${site.social.facebook}`}
     >
       Facebook Reviews
     </a>
