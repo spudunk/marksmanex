@@ -77,7 +77,7 @@
         <a 
           target="_blank" 
           class="link p-2" 
-          href={`${site.social.facebook}`}
+          href={`${site.social.facebook}/reviews`}
         >
           Facebook Reviews
         </a>
