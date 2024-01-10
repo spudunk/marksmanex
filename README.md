@@ -10,7 +10,7 @@ To create preview deployments, create and publish a new branch. The site will be
 Any updates to the 'main' branch will be automatically deployed to:
 `https://marksmanex.pages.dev`. 
 
-`marksmanexteriors.com has a CNAME (DNS) record that points to `marksmanex.pages.dev`. 
+`marksmanexteriors.com` has a CNAME (DNS) record that points to `marksmanex.pages.dev`. 
 
 SSL is handled automatically by Cloudflare. For this to work, the actc.pro CNAME record must be proxied through Cloudflare. This requires using the Cloudflare nameservers.
 
