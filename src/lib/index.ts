@@ -37,7 +37,7 @@ export const site = {
     url: "https://search.ccb.state.or.us/search/search_result.aspx?id=238815",
   },
   social: {
-    facebook: "https://www.facebook.com/profile.php?id=61555537824223",
+    facebook: "https://www.facebook.com/MarksmanExteriors",
     yelp: "https://www.yelp.com/biz/marksman-exteriors-silverton/",
     google: "",
     googleMaps: "",
