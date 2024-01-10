@@ -10,8 +10,8 @@ export const site = {
   title: "Marksman Exteriors - Woodburn Windows & Doors Contractor",
   description:
     "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodland and surrounding areas.", // xxx words
-  heading: "Unparalleled Windows and Doors Contractor",
-  subheading: "Quality that Shines",
+  heading: "Exceptional Windows and Doors Contractor",
+  subheading: "Unlock Your Dream Home",
   about: [
     "Marksman Exteriors specializes in two things: <em> Top notch quality and superior customer satisfaction. </em>",
     "At Marksman Exteriors, we understand the importance of windows and doors as essential components of any building's aesthetic appeal, functionality, and energy efficiency. That's why we take pride in our ability to transform spaces through high-quality installations and our attention to detail. Our team of skilled professionals is dedicated to delivering the finest workmanship, ensuring that your windows and doors not only enhance the appearance of your home but also provide durability and security.",
