@@ -40,9 +40,9 @@
     <div
       class="font-display font-light absolute top-0 left-0 bottom-0 right-0 container flex flex-col gap-6 justify-center items-center text-center h-full"
     >
-      <p class=" md:hidden text-xl text-neutral-200">
+      <!-- <p class=" md:hidden text-xl text-neutral-200">
         {site.company.name}
-      </p>
+      </p> -->
       <p class="text-3xl sm:text-4xl md:text-5xl text-neutral-200">
         Quality that Shines
       </p>
