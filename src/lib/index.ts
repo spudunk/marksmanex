@@ -38,7 +38,7 @@ export const site = {
   },
   social: {
     facebook: "https://www.facebook.com/MarksmanExteriors",
-    yelp: "https://www.yelp.com/biz/marksman-exteriors-silverton/",
+    yelp: "https://www.yelp.com/biz/marksman-exteriors-silverton",
     google: "",
     googleMaps: "",
   },
