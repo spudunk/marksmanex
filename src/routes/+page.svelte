@@ -6,6 +6,7 @@
   import LdTag from "$lib/SEO/LDTag.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import Contact from "$lib/Contact.svelte";
+  import ReviewLinks from "$lib/ReviewLinks.svelte";
   import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
 </script>
@@ -62,38 +63,7 @@
         </p>
       {/each}
 
-      <!-- 
-      <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
-        <img class="h-6 inline-block" src={Google} alt="Google logo" />
-        <a target="_blank" class="link p-2" href={site.social.google}>
-          Google Reviews
-        </a>
-      </p>
-       -->
-
-
-      <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
-        <img class="h-6 inline-block" src={Facebook} alt="Facebook logo" />
-        <a 
-          target="_blank" 
-          class="link p-2" 
-          href={`${site.social.facebook}/reviews`}
-        >
-          Facebook Reviews
-        </a>
-      </p>
-
-
-      <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
-        <img class="h-6 inline-block" src={Yelp} alt="Yelp logo" />
-        <a
-          target="_blank"
-          class="link p-2"
-          href={`${site.social.yelp}#reviews`}
-        >
-          Yelp Reviews
-        </a>
-      </p>
+      <ReviewLinks />
     </div>
   </section>
 

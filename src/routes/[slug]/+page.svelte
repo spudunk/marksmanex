@@ -13,6 +13,7 @@
   import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
+  import ReviewLinks from "$lib/ReviewLinks.svelte";
 
   const orgSchema = {
     ...(organizationSchema as Object),
@@ -72,25 +73,7 @@
         </p>
       {/each}
 
-      <!-- 
-      <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
-        <img class="h-6 inline-block" src={Google} alt="Google logo" />
-        <a target="_blank" class="link p-2" href={site.social.google}>
-          Google Reviews
-        </a>
-      </p>
-       -->
-
-      <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
-        <img class="h-6 inline-block" src={Yelp} alt="Yelp logo" />
-        <a
-          target="_blank"
-          class="link p-2"
-          href={`${site.social.yelp}#reviews`}
-        >
-          Yelp Reviews
-        </a>
-      </p>
+      <ReviewLinks />
     </div>
   </section>
 
