@@ -5,12 +5,12 @@ Styling uses [TailwindCSS](https://tailwindcss.com/docs/guides/sveltekit) to str
 Automatic deployments are configured using Github Actions and Cloudflare Pages. 
 
 To create preview deployments, create and publish a new branch. The site will be accessible at:
-`https://branch-name.actc.pages.dev`
+`https://branch-name.marksmanex.pages.dev`
 
 Any updates to the 'main' branch will be automatically deployed to:
-`https://actc.pages.dev`. 
+`https://marksmanex.pages.dev`. 
 
-`actc.pro` has a CNAME (DNS) record that points to `actc.pages.dev`. 
+`[marksmanexteriors](https://marksmanexteriors.com/)` has a CNAME (DNS) record that points to `marksmanex.pages.dev`. 
 
 SSL is handled automatically by Cloudflare. For this to work, the actc.pro CNAME record must be proxied through Cloudflare. This requires using the Cloudflare nameservers.
 
