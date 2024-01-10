@@ -38,7 +38,7 @@
   };
 </script>
 
-<div class="relative" bind:this={container}>
+<div class="relative overflow-hidden" bind:this={container}>
   <div class="absolute top-0 left-0 z-10 p-4">
     <button
       class="text-xl font-bold text-black py-1 px-2 bg-neutral-300 bg-opacity-80 rounded"
