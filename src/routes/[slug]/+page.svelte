@@ -11,11 +11,8 @@
 
   import Contact from "$lib/Contact.svelte";
   import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
-  import type { Image } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
-
-  const images: Image[] = [{ id: "", path: "", alt: "" }];
 
   const orgSchema = {
     ...(organizationSchema as Object),
@@ -37,7 +34,7 @@
       class="absolute top-0 left-0 bottom-0 right-0 overflow-x-clip bg-frontDoor bg-cover bg-center"
     ></div>
     <div
-      class="mix-blend-multiply backdrop-blur opacity-80 absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-b from-neutral-500 via-neutral-950 to-neutral-500"
+      class="mix-blend-multiply backdrop-blur opacity-60 absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-b from-neutral-500 via-neutral-950 to-neutral-500"
     ></div>
     <div
       class="font-display font-light absolute top-0 left-0 bottom-0 right-0 container flex flex-col gap-6 justify-center items-center text-center h-full"
@@ -56,7 +53,7 @@
 
   <section id="services" class="">
     <div class="container w-full">
-      <h2 class="text-3xl my-4 font-display">Benefits</h2>
+      <h2 class="text-3xl mb-4 mt-12 font-display">Benefits</h2>
       <p>
         {@html site.servicesCopy}
       </p>
@@ -100,7 +97,7 @@
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <!-- <Carousel debug images={galleryImages} /> -->
+      <Carousel images={galleryImages} />
     </div>
   </section>
 

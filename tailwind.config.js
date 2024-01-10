@@ -20,7 +20,7 @@ export default {
       },
       backgroundImage: {
         // custom background images
-        frontDoor: "url('/images/alex-padurariu-2UE1givDiPM-unsplash.jpg')"
+        frontDoor: "url('https://imagedelivery.net/XvH0UEoGmg1LgCBcC8XRgw//8d1dfa22-0e73-40e2-2edf-3218fede6400/public')"
       },
     },
   },

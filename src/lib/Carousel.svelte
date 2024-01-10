@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Image } from "$lib";
+  import { imagePath, type Image } from "$lib";
   export let images: Image[];
   export let scrollTimeout = 900;
   export let debug = false;
@@ -81,7 +81,7 @@
         {/if}
         <img
           loading="lazy"
-          src={image.path}
+          src={`${imagePath}/${image.id}/h=640`}
           alt={image.alt}
           id={image.id}
           class="h-60 md:h-72 lg:h-80 min-w-fit rounded"
@@ -102,7 +102,7 @@
   >
     <img
       class="max-w-full max-h-screen pt-20 pb-2 px-2"
-      src={selected.path}
+      src={`${imagePath}/${selected.id}/public`}
       alt={selected.alt}
     />
   </button>

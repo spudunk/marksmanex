@@ -2,11 +2,18 @@
   // import Logo from "$lib/Logo.svelte";
   import { page } from "$app/stores";
   import { site } from "$lib";
+  import { onMount } from "svelte";
+
   import Logo from "$lib/Logo.svelte";
   export let hero = false;
+  let loaded = false;
   let y = 0;
   $: atTop = y < 25;
-  $: expand = atTop && hero && $page.status == 200;
+  $: expand = atTop && hero && $page.status == 200 && loaded;
+
+  onMount(() => {
+    loaded = true;
+  });
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -20,7 +27,10 @@
     class="container w-full grid grid-cols-nav justify-between items-center py-2 min-h-12"
   >
     <a href="/" class="flex gap-2 items-center">
-      <Logo class={`${expand? "h-10 sm:h-20": "h-10"} transition-all`} color="white" />
+      <Logo
+        class={`${expand ? "h-10 sm:h-20" : "h-10"} transition-all`}
+        color="white"
+      />
     </a>
     <!-- <div></div> -->
 

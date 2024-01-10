@@ -71,33 +71,33 @@ export const socialLinks = [
   },
 ];
 
+// https://imagedelivery.net/XvH0UEoGmg1LgCBcC8XRgw/<image_id>/<variant_name>
+export const imagePath = "https://imagedelivery.net/XvH0UEoGmg1LgCBcC8XRgw/";
+
 export const galleryImages: Image[] = [
-  { id: "1", path: "/images/gallery/20220510_155930.jpg", alt: "" },
-  { id: "2", path: "/images/gallery/20220511_155429.jpg", alt: "" },
-  { id: "3", path: "/images/gallery/20220511_155436.jpg", alt: "" },
-  { id: "4", path: "/images/gallery/20220614_121523.jpg", alt: "" },
-  { id: "5", path: "/images/gallery/20220621_144733.jpg", alt: "" },
-  { id: "6", path: "/images/gallery/20220809_140939.jpg", alt: "" },
-  { id: "7", path: "/images/gallery/20220812_133111.jpg", alt: "" },
-  { id: "8", path: "/images/gallery/20221115_170243.jpg", alt: "" },
-  { id: "9", path: "/images/gallery/20230227_124116.jpg", alt: "" },
-  { id: "10", path: "/images/gallery/20230301_160546.jpg", alt: "" },
-  // { id: "11", path: "/images/gallery/20230306_094930.jpg", alt: "" },
-  { id: "12", path: "/images/gallery/20230306_144155.jpg", alt: "" },
-  { id: "13", path: "/images/gallery/20230404_140542.jpg", alt: "" },
-  { id: "14", path: "/images/gallery/20230412_164505.jpg", alt: "" },
-  { id: "15", path: "/images/gallery/20230425_135058.jpg", alt: "" },
-  { id: "16", path: "/images/gallery/20230425_135103.jpg", alt: "" },
-  { id: "17", path: "/images/gallery/20230425_135110.jpg", alt: "" },
-  { id: "18", path: "/images/gallery/20230425_135143.jpg", alt: "" },
-  { id: "19", path: "/images/gallery/20230425_135151.jpg", alt: "" },
-  { id: "20", path: "/images/gallery/20231106_155205.jpg", alt: "" },
-  { id: "21", path: "/images/gallery/20231106_155215.jpg", alt: "" },
-  {
-    id: "22",
-    path: "/images/gallery/Screenshot_20230627_203955_Messages.jpg",
-    alt: "",
-  },
+  { id: "e0d6195b-006c-4c77-515d-2669faf70500", alt: "" }, // 2
+  { id: "a24250b0-223a-4707-dbca-6e032cba8f00", alt: "" }, // 5
+  { id: "d0a75ed9-df19-4ace-cf5a-c95de394b700", alt: "" }, // 1
+  { id: "07aa8e7a-30cc-4da8-f2d8-e3c6582c4d00", alt: "" }, // 13
+  { id: "13645df5-b7d5-4055-0b10-ce5b6f753700", alt: "" }, // 19
+  { id: "b15a9a15-5d99-408c-2a43-e2ea7ae63a00", alt: "" }, // 7
+  { id: "5332a5f3-44db-46e3-71aa-bdca66feca00", alt: "" }, // 16
+  { id: "47705321-788a-4ebb-7104-7869c32f5200", alt: "" }, // 15
+  { id: "fdcb0490-7603-44a3-713b-847f5eb78400", alt: "" }, // 11
+  { id: "9075443c-0eaa-4cd0-db1f-5e697d500500", alt: "" }, // 8
+  { id: "22217e35-4c49-4fce-54ce-f305cef7a600", alt: "" }, // 20
+  { id: "7324ec20-483e-418a-9ac3-bd7125a55c00", alt: "" }, // 12
+  { id: "d36ca3e8-f64e-4a8f-9aef-911bcf8aa000", alt: "" }, // 3
+  { id: "a754bed3-68dd-4463-879f-896e1f0dc400", alt: "" }, // 9
+  { id: "9987a414-78f8-4469-64e0-8590c0b89300", alt: "" }, // 10
+  { id: "07c18bf0-a466-4e7e-fcb9-48adbd1e1800", alt: "" }, // 18
+  { id: "622bfd28-ac3e-4ec5-f780-cad7f393d800", alt: "" }, // 4
+  { id: "586d7ca0-679b-48ac-a753-ce2f2b9a3300", alt: "" }, // 14
+  { id: "89b3349b-a9d9-4386-db23-90dac149ed00", alt: "" }, // 21
+  { id: "54410a95-3cfc-4e42-dc3f-dffe3dc50900", alt: "" }, // 6
+  { id: "0fc1d3ab-15cd-467d-58f5-3495b59dd300", alt: "" }, // 17
+  { id: "69c25642-5bd1-4d6e-32df-420506cf8d00", alt: "" }, // 22
+  { id: "8d1dfa22-0e73-40e2-2edf-3218fede6400", alt: "" }, // 23
 ];
 
 export const locations: Locations = {
@@ -205,7 +205,7 @@ export function serializeSchema(thing: Schema) {
 }
 
 export type Schema = Thing | WithContext<Thing>;
-export type Image = { id: string; path: string; alt: string };
+export type Image = { id: string; alt: string };
 
 type Location = {
   name: string;
