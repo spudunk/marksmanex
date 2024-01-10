@@ -30,7 +30,7 @@
 {#if site.social.yelp}
   <p class="mt-4 text-xl flex flex-wrap items-center gap-2">
     <img class="h-6 inline-block" src={Yelp} alt="Yelp logo" />
-    <a target="_blank" class="link p-2" href={`${site.social.yelp}/#reviews`}>
+    <a target="_blank" class="link p-2" href={`${site.social.yelp}#reviews`}>
       Yelp Reviews
     </a>
   </p>
