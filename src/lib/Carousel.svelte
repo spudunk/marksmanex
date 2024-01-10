@@ -22,11 +22,12 @@
       ? (scrollIndex = scrollIndex % images.length)
       : (scrollIndex = images.length - 1);
     const child = images[scrollIndex];
-    child.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "start",
-    });
+    // child.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "nearest",
+    //   inline: "start",
+    // });
+    carousel.scrollLeft = child.offsetLeft - child.offsetWidth/2;
     timeoutIndex = setTimeout(() => {
       allowEvent = true;
     }, scrollTimeout);
