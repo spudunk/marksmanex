@@ -35,7 +35,6 @@
     // });
     carousel.scrollLeft = child.offsetLeft - child.offsetWidth / 2;
     current = child;
-    console.log(scrollIndex);
   };
 
   const handleScroll = (e: Event) => {
@@ -48,7 +47,6 @@
         carousel.childElementCount
     );
     current = carousel.children[scrollIndex] as HTMLButtonElement;
-    console.log();
   };
 </script>
 
@@ -61,21 +59,19 @@
   <ArrowButton
     d="l"
     on:click={() => {
-      console.log("click l");
       incrementScroll(-1);
     }}
   />
   <ArrowButton
     d="r"
     on:click={() => {
-      console.log("click r");
       incrementScroll(1);
     }}
   />
 
   <!-- bullets -->
   <div
-    class="absolute bottom-2 left-1/2 flex gap-1 -translate-x-1/2 z-40 opacity-80"
+    class="absolute bottom-2 left-1/2 flex gap-1 -translate-x-1/2 z-40 opacity-80 max-w-full"
   >
     {#each carousel?.children || [] as child}
       <div
