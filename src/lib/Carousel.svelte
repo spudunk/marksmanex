@@ -79,7 +79,7 @@
   >
     {#each carousel?.children || [] as child}
       <div
-        class={`h-4 w-4 rounded-full ${
+        class={`h-2 w-2 md:h-4 md:w-4 rounded-full ${
           child === current ? "bg-white" : "bg-slate-500"
         }`}
       ></div>
