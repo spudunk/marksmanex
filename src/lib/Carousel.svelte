@@ -58,13 +58,15 @@
   <!-- Control Buttons -->
   <ArrowButton
     d="l"
-    on:click={() => {
+    on:click={(e) => {
+      e.preventDefault;
       incrementScroll(-1);
     }}
   />
   <ArrowButton
     d="r"
-    on:click={() => {
+    on:click={(e) => {
+      e.preventDefault;
       incrementScroll(1);
     }}
   />
