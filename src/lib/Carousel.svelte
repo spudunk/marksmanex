@@ -1,5 +1,6 @@
 <script lang="ts">
   import { imagePath, type Image } from "$lib";
+  import { onMount } from "svelte";
   import ArrowButton from "./ArrowButton.svelte";
   export let images: Image[];
   export let debug = false;
@@ -48,6 +49,10 @@
     );
     current = carousel.children[scrollIndex] as HTMLButtonElement;
   };
+
+  onMount(()=>{
+    current = carousel.children[0] as HTMLButtonElement;
+  })
 </script>
 
 <!-- Outer Container -->
