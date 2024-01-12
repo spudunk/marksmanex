@@ -184,7 +184,7 @@ export const organizationSchema: WithContext<Organization> = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
-    ratingCount: "0",
+    ratingCount: "1",
   },
   foundingDate: site.company.foundingDate,
 };
