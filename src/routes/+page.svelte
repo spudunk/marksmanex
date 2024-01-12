@@ -4,11 +4,12 @@
   import Yelp from "$lib/icons/yelp_burst.svg";
   import MetaTags from "$lib/SEO/MetaTags.svelte";
   import LdTag from "$lib/SEO/LDTag.svelte";
-  import Carousel from "$lib/Carousel.svelte";
   import Contact from "$lib/Contact.svelte";
   import ReviewLinks from "$lib/ReviewLinks.svelte";
   import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
+  import Carousel from "$lib/Carousel.svelte";
+
 </script>
 
 <MetaTags />

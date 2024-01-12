@@ -7,7 +7,7 @@
   const copyrightYear = 2024;
 </script>
 
-<footer class="py-8 bg-gradient-to-b from-neutral-200 to-neutral-50">
+<footer class="pt-8 pb-14 sm:pb-8 bg-gradient-to-b from-neutral-200 to-neutral-50">
   <div class="container min-h-12 grid gap-4 md:grid-cols-3 md:gap-2 lg:gap-6">
     <nav class="w-full mb-2">
       <h3 class="font-bold font-display">Social Links</h3>

@@ -1,86 +1,103 @@
 <script lang="ts">
   import { imagePath, type Image } from "$lib";
+  import ArrowButton from "./ArrowButton.svelte";
   export let images: Image[];
-  export let scrollTimeout = 900;
   export let debug = false;
 
   let carousel: HTMLDivElement;
   let container: HTMLDivElement;
-  let scrollIndex = 0;
-  let allowEvent = true;
-  let timeoutIndex: number;
-  let selected: undefined | Image;
 
-  // increment scroll without triggering onScroll update
-  // use timeout to wait until scrolling has finished
+  let scrollIndex = 0;
+
+  let current: HTMLButtonElement; // current item in view for bottom view
+  let selected: number | undefined; // selected item index for modal overlay
+
+  let scrolling = false;
+  let scrollTimeout: number | undefined;
+  export let timeoutMS = 1000;
+
   const incrementScroll = (adj: number) => {
-    clearTimeout(timeoutIndex);
-    allowEvent = false;
+    scrolling = true;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      scrolling = false;
+    }, timeoutMS);
     const images = carousel.children;
     scrollIndex = scrollIndex + adj;
     scrollIndex >= 0
       ? (scrollIndex = scrollIndex % images.length)
       : (scrollIndex = images.length - 1);
-    const child = images[scrollIndex];
+    const child = images[scrollIndex] as HTMLButtonElement;
     // child.scrollIntoView({
     //   behavior: "smooth",
     //   block: "nearest",
     //   inline: "start",
     // });
-    carousel.scrollLeft = child.offsetLeft - child.offsetWidth/2;
-    timeoutIndex = setTimeout(() => {
-      allowEvent = true;
-    }, scrollTimeout);
+    carousel.scrollLeft = child.offsetLeft - child.offsetWidth / 2;
+    current = child;
+    console.log(scrollIndex);
   };
 
-  // update index with onScroll event
-  const setScrollPosition = () => {
-    if (allowEvent) {
-      scrollIndex = Math.floor(
-        (carousel.scrollLeft / carousel.scrollWidth) * carousel.children.length
-      );
+  const handleScroll = (e: Event) => {
+    if (scrolling) {
+      return;
     }
+    scrollIndex = Math.floor(
+      ((carousel.scrollLeft + container.scrollWidth / 2) /
+        carousel.scrollWidth) *
+        carousel.childElementCount
+    );
+    current = carousel.children[scrollIndex] as HTMLButtonElement;
+    console.log();
   };
 </script>
 
-<div class="relative overflow-x-clip h-60 md:h-72 lg:h-80" bind:this={container}>
+<!-- Outer Container -->
+<div
+  class="relative overflow-x-clip h-60 md:h-72 lg:h-80"
+  bind:this={container}
+>
+  <!-- Control Buttons -->
+  <ArrowButton
+    d="l"
+    on:click={() => {
+      console.log("click l");
+      incrementScroll(-1);
+    }}
+  />
+  <ArrowButton
+    d="r"
+    on:click={() => {
+      console.log("click r");
+      incrementScroll(1);
+    }}
+  />
 
-  <div class="absolute top-0 left-0 z-50 p-4">
-    <button
-      class="text-xl font-bold text-black py-1 px-2 bg-neutral-300 bg-opacity-80 rounded"
-      on:click={(e) => {
-        incrementScroll(-1);
-      }}
-    >
-      &leftarrow;
-    </button>
-    <span
-      class="w-10 text-center inline-block text-xl font-bold text-black py-1 px-2 bg-neutral-300 bg-opacity-80 rounded"
-    >
-      {scrollIndex + 1}
-    </span>
-    <button
-      class="text-xl font-bold text-black py-1 px-2 bg-neutral-300 bg-opacity-80 rounded"
-      on:click={(e) => {
-        incrementScroll(1);
-      }}
-    >
-      &rightarrow;
-    </button>
+  <!-- bullets -->
+  <div
+    class="absolute bottom-2 left-1/2 flex gap-1 -translate-x-1/2 z-40 opacity-80"
+  >
+    {#each carousel?.children || [] as child}
+      <div
+        class={`h-4 w-4 rounded-full ${
+          child === current ? "bg-white" : "bg-slate-500"
+        }`}
+      ></div>
+    {/each}
   </div>
 
-
+  <!-- Inner Container -->
   <div
-    class="absolute top-0 left-0 scroll-smooth overflow-x-auto flex gap-4 w-fit"
+    class="absolute top-0 left-0 right-0 overflow-x-scroll snap-x snap-mandatory flex scroll-smooth"
     bind:this={carousel}
-    on:scroll={setScrollPosition}
+    on:scroll={handleScroll}
   >
-    {#each images as image (image.id)}
-
+    {#each images as image, index (image.id)}
+      <!-- Image Container -->
       <button
-        class="relative block min-w-fit ml-2"
+        class="relative block min-w-fit ml-2 snap-center"
         on:click={() => {
-          selected = image;
+          selected = index;
           document.body.style.overflow = "hidden";
         }}
       >
@@ -96,29 +113,32 @@
           src={`${imagePath}/${image.id}/h=640`}
           alt={image.alt}
           id={image.id}
-          class="h-60 md:h-72 lg:h-80 min-w-fit rounded"
+          class="h-60 md:h-72 lg:h-80 rounded"
         />
       </button>
-
     {/each}
   </div>
 </div>
 
-
-
-
-{#if selected}
+<!-- Modal overlay image -->
+{#if selected !== undefined}
   <button
-    class="fixed top-0 left-0 z-30 right-0 bottom-0 flex justify-center items-center bg-neutral-300 rounded overflow-clip"
+    class="fixed top-0 left-0 z-50 right-0 bottom-0 flex justify-center items-center bg-neutral-300 rounded overflow-clip"
     on:click={() => {
       selected = undefined;
       document.body.style.overflow = "visible";
     }}
   >
     <img
-      class="max-w-full max-h-screen pt-20 pb-2 px-2"
-      src={`${imagePath}/${selected.id}/public`}
-      alt={selected.alt}
+      class="max-w-full max-h-screen p-2"
+      src={`${imagePath}/${images[selected].id}/public`}
+      alt={""}
     />
   </button>
 {/if}
+
+<style>
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+</style>
