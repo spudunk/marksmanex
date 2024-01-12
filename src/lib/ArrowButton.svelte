@@ -10,7 +10,7 @@
 <button
   class={`absolute cursor-pointer top-1/2 -translate-y-1/2 z-40 ease-in-out bg-neutral-700 bg-opacity-50 rounded-md p-2 ${
     d === "left" || d === "l" ? "left-2" : "right-2"
-  }`}
+  } ${$$props.class || ""}`}
   on:click={(e)=>{dispatch('click', e)}}
 >
   <svg

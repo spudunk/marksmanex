@@ -3,7 +3,6 @@
   import Google from "$lib/icons/google.svg";
   import Facebook from "$lib/icons/facebook.svg";
   import Yelp from "$lib/icons/yelp_burst.svg";
-  site.social.google = "https://google.com";
 </script>
 
 <nav

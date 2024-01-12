@@ -52,12 +52,13 @@
 
 <!-- Outer Container -->
 <div
-  class="relative overflow-x-clip h-60 md:h-72 lg:h-80 touch-none"
+  class="relative overflow-x-clip h-60 md:h-72 lg:h-80 touch-auto"
   bind:this={container}
 >
   <!-- Control Buttons -->
   <ArrowButton
     d="l"
+    class="hidden sm:block"
     on:click={(e) => {
       e.preventDefault;
       incrementScroll(-1);
@@ -65,6 +66,7 @@
   />
   <ArrowButton
     d="r"
+    class="hidden sm:block"
     on:click={(e) => {
       e.preventDefault;
       incrementScroll(1);
@@ -86,7 +88,7 @@
 
   <!-- Inner Container -->
   <div
-    class="absolute top-0 left-0 right-0 overflow-x-scroll snap-x snap-mandatory flex scroll-smooth"
+    class="absolute top-0 left-0 right-0 overflow-x-scroll snap-x snap-mandatory flex scroll-smooth scrollbar-hide"
     bind:this={carousel}
     on:scroll={handleScroll}
   >
@@ -136,7 +138,14 @@
 {/if}
 
 <style>
-  .scrollbar-none {
-    scrollbar-width: none;
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 </style>
