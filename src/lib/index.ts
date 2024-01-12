@@ -72,7 +72,7 @@ export const socialLinks = [
 ];
 
 // https://imagedelivery.net/XvH0UEoGmg1LgCBcC8XRgw/<image_id>/<variant_name>
-export const imagePath = "https://imagedelivery.net/XvH0UEoGmg1LgCBcC8XRgw/";
+export const imagePath = "https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/";
 
 export const galleryImages: Image[] = [
   { id: "8d1dfa22-0e73-40e2-2edf-3218fede6400", alt: "work sample" }, // 23
