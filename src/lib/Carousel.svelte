@@ -52,7 +52,7 @@
 
 <!-- Outer Container -->
 <div
-  class="relative overflow-x-clip h-60 md:h-72 lg:h-80"
+  class="relative overflow-x-clip h-60 md:h-72 lg:h-80 touch-none"
   bind:this={container}
 >
   <!-- Control Buttons -->
