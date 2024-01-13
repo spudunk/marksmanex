@@ -20,15 +20,6 @@
 <LdTag schema={organizationSchema} />
 <LdTag schema={websiteSchema} />
 
-<svelte:head>
-  <!-- Preload Hero image for Lighthouse Performance -->
-  <link
-    rel="preload"
-    as="image"
-    href={`${imagePath}/8d1dfa22-0e73-40e2-2edf-3218fede6400/public`}
-  />
-</svelte:head>
-
 <Navbar hero />
 <main class="relative">
   <section
