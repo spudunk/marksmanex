@@ -35,5 +35,5 @@
     <meta name="twitter:image" content={img} />
   {/if}
 
-  <link rel="“canonical”" href={canonical} />
+  <link rel="canonical" href={canonical} />
 </svelte:head>
