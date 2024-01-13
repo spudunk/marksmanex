@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        notoSans: "Noto Sans",
-        notoSerif: "Noto Serif",
+        notoSans: ["Noto Sans", "sans-serif"],
+        notoSerif: ["Noto Serif", "serif"],
         display: ["Bebas Neue", "sans-serif"],
       },
       backgroundImage: {
