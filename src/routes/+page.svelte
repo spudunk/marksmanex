@@ -1,25 +1,22 @@
 <script lang="ts">
-  import Google from "$lib/icons/google.svg";
-  import Facebook from "$lib/icons/facebook.svg";
-  import Yelp from "$lib/icons/yelp_burst.svg";
   import MetaTags from "$lib/SEO/MetaTags.svelte";
   import LdTag from "$lib/SEO/LDTag.svelte";
   import Contact from "$lib/Contact.svelte";
   import ReviewLinks from "$lib/ReviewLinks.svelte";
-  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
-
+  import CfImage from "$lib/CfImage.svelte";
+  import {
+    site,
+    organizationSchema,
+    websiteSchema,
+    galleryImages,
+  } from "$lib";
 </script>
 
 <MetaTags />
 <LdTag schema={organizationSchema} />
 <LdTag schema={websiteSchema} />
-
-<svelte:head>
-  <!-- Preload Hero image for Lighthouse Performance -->
-  <link rel="preload" as="image" href="https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public">
-</svelte:head>
 
 <Navbar hero />
 <main class="relative">
@@ -28,8 +25,18 @@
     class="-z-10 relative min-h-[90vh] flex flex-col justify-center"
   >
     <div
-      class="absolute top-0 left-0 bottom-0 right-0 overflow-x-clip bg-frontDoor bg-cover bg-center"
-    ></div>
+      class="absolute top-0 left-0 bottom-0 right-0 overflow-clip flex items-center"
+    >
+      <CfImage
+        alt="luxury home with new windows"
+        id="8d1dfa22-0e73-40e2-2edf-3218fede6400"
+        class="min-w-full min-h-full object-cover aspect-90-61"
+        widths="[360, 480, 800]"
+        srcWidth="1080"
+        width="1080"
+        height="732"
+      />
+    </div>
     <div
       class="mix-blend-multiply backdrop-blur opacity-60 absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-b from-neutral-500 via-neutral-950 to-neutral-500"
     ></div>

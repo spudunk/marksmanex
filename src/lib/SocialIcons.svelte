@@ -34,7 +34,7 @@
 
   {#if site.social.yelp}
     <a target="_blank" class="h-full" href={site.social.yelp}>
-      <img class="h-full inline-block" src={Yelp} alt="Yelp logo" aria-label="Yelp Business Profile" />
+      <img class="h-full aspect-square inline-block" src={Yelp} alt="Yelp logo" aria-label="Yelp Business Profile" />
     </a>
   {/if}
 </nav>
