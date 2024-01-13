@@ -1,4 +1,5 @@
 <script lang="ts">
+  // import { Image as UnpicImage } from "@unpic/svelte";
   import { imagePath, type Image } from "$lib";
   import { onMount } from "svelte";
   import ArrowButton from "./ArrowButton.svelte";
@@ -50,9 +51,9 @@
     current = carousel.children[scrollIndex] as HTMLButtonElement;
   };
 
-  onMount(()=>{
+  onMount(() => {
     current = carousel.children[0] as HTMLButtonElement;
-  })
+  });
 </script>
 
 <!-- Outer Container -->
@@ -123,6 +124,7 @@
           height="240"
           width="320"
         />
+        <!-- <UnpicImage src={`${imagePath}${image.id}`} height={320} class="h-60 md:h-72 lg:h-80 rounded" /> -->
       </button>
     {/each}
   </div>

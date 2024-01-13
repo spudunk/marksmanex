@@ -30,6 +30,8 @@
     "@fontsource/bebas-neue": "^5.0.18",
     "@fontsource/noto-sans": "^5.0.18",
     "@fontsource/noto-serif": "^5.0.18",
+    "@unpic/placeholder": "^0.1.2",
+    "@unpic/svelte": "^0.0.43",
     "lucide-svelte": "^0.302.0"
   }
 }
