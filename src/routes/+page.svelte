@@ -11,9 +11,7 @@
     organizationSchema,
     websiteSchema,
     galleryImages,
-    imagePath,
   } from "$lib";
-  // import heroImage from "$lib/hero.jpg";
 </script>
 
 <MetaTags />
