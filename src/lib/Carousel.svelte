@@ -115,7 +115,8 @@
         {/if}
         <img
           loading="lazy"
-          src={`${imagePath}/${image.id}/h=640`}
+          src={`${imagePath}/${image.id}/h=320`}
+          srcset={`${imagePath}/${image.id}/h=320, ${imagePath}/${image.id}/h=640 2x`}
           alt={image.alt}
           id={image.id}
           class="h-60 md:h-72 lg:h-80 rounded"

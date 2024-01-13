@@ -5,7 +5,14 @@
   import ReviewLinks from "$lib/ReviewLinks.svelte";
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
-  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
+  import CfImage from "$lib/CfImage.svelte";
+  import {
+    site,
+    organizationSchema,
+    websiteSchema,
+    galleryImages,
+    imagePath,
+  } from "$lib";
   // import heroImage from "$lib/hero.jpg";
 </script>
 
@@ -18,7 +25,7 @@
   <link
     rel="preload"
     as="image"
-    href="https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public"
+    href={`${imagePath}/8d1dfa22-0e73-40e2-2edf-3218fede6400/public`}
   />
 </svelte:head>
 
@@ -28,15 +35,17 @@
     id="hero"
     class="-z-10 relative min-h-[90vh] flex flex-col justify-center"
   >
-    <img
-      alt="luxury home with new windows"
-      src="https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public"
-      srcset="https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/w=480 480w, https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/w=800 800w, https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public 1080w"
-      sizes="100vw"
-      class="absolute top-0 left-0 bottom-0 right-0 min-w-full min-h-full object-cover"
-      width="1080"
-      height="732"
-    />
+    <div
+      class="absolute top-0 left-0 bottom-0 right-0 overflow-clip flex items-center"
+    >
+      <CfImage
+        alt="luxury home with new windows"
+        id="8d1dfa22-0e73-40e2-2edf-3218fede6400"
+        class="min-w-full min-h-full object-cover"
+        widths="[360, 480, 800]"
+        srcWidth="1080"
+      />
+    </div>
     <div
       class="mix-blend-multiply backdrop-blur opacity-60 absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-b from-neutral-500 via-neutral-950 to-neutral-500"
     ></div>
