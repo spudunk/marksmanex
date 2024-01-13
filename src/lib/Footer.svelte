@@ -22,7 +22,7 @@
               >
                 {#if social.icon}
                   <img
-                    class="h-[1em] inline-block"
+                    class="h-[1em] inline-block aspect-square"
                     src={social.icon}
                     alt={social.iconAlt}
                   />
