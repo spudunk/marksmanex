@@ -16,11 +16,12 @@ export default {
       fontFamily: {
         notoSans: "Noto Sans",
         notoSerif: "Noto Serif",
-        display: "Bebas Neue",
+        display: ["Bebas Neue", "sans-serif"],
       },
       backgroundImage: {
         // custom background images
-        frontDoor: "url('https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public')"
+        frontDoor:
+          "url('https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public')",
       },
     },
   },

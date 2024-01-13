@@ -16,7 +16,7 @@
   // sizes example:
   // (max-width: 1500px) 1500px,
   // (max-width: 2000px) 2000px,
-            // 12000px"
+  // 12000px"
 
   type SrcSetWidthConfig = {
     id: string;
@@ -33,28 +33,12 @@
   };
 
   let srcSetWidthConfig: SrcSetWidthConfig;
-  if (type === "width") {
-    srcSetWidthConfig = {
-      id: id,
-      prefix: imagePath,
-      widths: JSON.parse(widths),
-      srcWidth: srcWidth,
-    };
-  }
-
   let srcSetHeightConfig: SrcSetHeightConfig;
-  if (type === "height") {
-    srcSetHeightConfig = {
-      id: id,
-      prefix: imagePath,
-      heights: JSON.parse(heights),
-      srcHeight: srcHeight,
-    };
-  }
+  let srcset: string;
 
   function getSrcSetWidth(config: SrcSetWidthConfig) {
     let sources: string[] = [];
-    config.widths.forEach((width) => {
+    config.widths?.forEach((width) => {
       sources.push(`${config.prefix}${config.id}/w=${width} ${width}w`);
     });
     if (srcWidth) {
@@ -63,10 +47,10 @@
     return sources.join(", ");
   }
 
-  function getSrcSetHeight(config: getSrcSetWidthConfig) {
+  function getSrcSetHeight(config: SrcSetHeightConfig) {
     let sources: string[] = [];
-    config.heights.forEach((height) => {
-      sources.push(`${config.prefix}${id}/h=${height} ${height}w`);
+    config.heights?.forEach((height) => {
+      sources.push(`${config.prefix}${config.id}/h=${height} ${height}w`);
     });
     if (srcHeight) {
       sources.push(`${config.prefix}${config.id}/public ${config.srcHeight}w`);
@@ -74,10 +58,35 @@
     return sources.join(", ");
   }
 
-  const srcset =
-    type === "width"
-      ? getSrcSetWidth(srcSetWidthConfig)
-      : getSrcSetHeight(srcSetHeightConfig);
+  if (type === "width" && widths) {
+    srcSetWidthConfig = {
+      id: id,
+      prefix: imagePath,
+      widths: JSON.parse(widths),
+      srcWidth: srcWidth,
+    };
+    srcset = getSrcSetWidth(srcSetWidthConfig);
+  }
+
+  if (type === "height" && heights) {
+    srcSetHeightConfig = {
+      id: id,
+      prefix: imagePath,
+      heights: JSON.parse(heights),
+      srcHeight: srcHeight,
+    };
+    srcset = getSrcSetHeight(srcSetHeightConfig);
+  }
+
 </script>
 
-<img class={$$props.class} {alt} {src} {srcset} {sizes} {width} {height} {loading} />
+<img
+  class={$$props.class}
+  {alt}
+  {src}
+  {srcset}
+  {sizes}
+  {width}
+  {height}
+  {loading}
+/>

@@ -40,5 +40,7 @@
   .link {
     @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
   }
-
+  .aspect-hero {
+    aspect-ratio: 90/61 auto;
+  }
 }

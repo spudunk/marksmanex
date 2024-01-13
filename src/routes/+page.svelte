@@ -30,9 +30,11 @@
       <CfImage
         alt="luxury home with new windows"
         id="8d1dfa22-0e73-40e2-2edf-3218fede6400"
-        class="min-w-full min-h-full object-cover"
+        class="min-w-full min-h-full object-cover aspect-90-61"
         widths="[360, 480, 800]"
         srcWidth="1080"
+        width="1080"
+        height="732"
       />
     </div>
     <div
