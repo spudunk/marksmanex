@@ -6,15 +6,10 @@
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import CfImage from "$lib/CfImage.svelte";
-  import {
-    site,
-    organizationSchema,
-    websiteSchema,
-    galleryImages,
-  } from "$lib";
+  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
 </script>
 
-<MetaTags />
+<MetaTags canonical={site.url} url={site.url} />
 <LdTag schema={organizationSchema} />
 <LdTag schema={websiteSchema} />
 

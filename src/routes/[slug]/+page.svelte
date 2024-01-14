@@ -8,26 +8,31 @@
   import Yelp from "$lib/icons/yelp_burst.svg";
   import SEO from "$lib/SEO/MetaTags.svelte";
   import LdTag from "$lib/SEO/LDTag.svelte";
-
   import Contact from "$lib/Contact.svelte";
-  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import ReviewLinks from "$lib/ReviewLinks.svelte";
+
+  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
 
   const orgSchema = {
     ...(organizationSchema as Object),
     areaServed: data.areaServed,
   } as Organization;
+  const url = `${site.url}${data.slug}`
 </script>
 
-<SEO description={data.description} title={data.title} />
+<SEO description={data.description} title={data.title} {url} canonical={url} />
 <LdTag schema={orgSchema} />
 <LdTag schema={websiteSchema} />
 
 <svelte:head>
   <!-- Preload Hero image for Lighthouse Performance -->
-  <link rel="preload" as="image" href="https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public">
+  <link
+    rel="preload"
+    as="image"
+    href="https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/8d1dfa22-0e73-40e2-2edf-3218fede6400/public"
+  />
 </svelte:head>
 
 <Navbar hero />
