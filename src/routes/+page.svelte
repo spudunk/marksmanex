@@ -9,7 +9,7 @@
   import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
 </script>
 
-<MetaTags canonical={site.url} url={site.url} />
+<MetaTags canonical={site.url} url={site.url} domain={site.url} />
 <LdTag schema={organizationSchema} />
 <LdTag schema={websiteSchema} />
 

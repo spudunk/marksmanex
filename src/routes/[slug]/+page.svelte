@@ -22,7 +22,7 @@
   const url = `${site.url}${data.slug}`
 </script>
 
-<SEO description={data.description} title={data.title} {url} canonical={url} />
+<SEO description={data.description} title={data.title} {url} canonical={url} domain={site.url} />
 <LdTag schema={orgSchema} />
 <LdTag schema={websiteSchema} />
 
