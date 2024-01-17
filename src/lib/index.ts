@@ -9,7 +9,7 @@ export const site = {
   url: "https://marksmanexteriors.com/",
   title: "Marksman Exteriors - Portland to Salem Windows and Doors Contractor",
   description:
-    "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodland and surrounding areas.", // xxx words
+    "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodburn and surrounding areas.", // xxx words
   heading: "Exceptional Windows and Doors Contractor",
   subheading: "Unlock Your Dream Home",
   about: [
