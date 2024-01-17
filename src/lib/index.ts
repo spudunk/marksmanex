@@ -104,64 +104,64 @@ export const galleryImages: Image[] = [
 export const locations: Locations = {
   portland: {
     name: "Portland",
-    heading: `Portland's Superior Windows & Doors Contractor`,
-    title: "Marksman Exteriors - Portland Windows & Doors Contractor",
+    heading: `Portland's Superior Windows and Doors Contractor`,
+    title: "Marksman Exteriors - Portland Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Portland and surrounding areas.",
     areaServed: "Portland, OR",
   },
   lakeoswego: {
     name: "Lake Oswego",
-    heading: "Lake Oswego's Trusted Windows & Doors Contractor",
-    title: "Marksman Exteriors - Lake Oswego Windows & Doors Contractor",
+    heading: "Lake Oswego's Trusted Windows and Doors Contractor",
+    title: "Marksman Exteriors - Lake Oswego Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Lake Oswego, OR.",
     areaServed: "Lake Oswego, OR",
   },
   beaverton: {
     name: "Beaverton",
-    heading: "Beaverton's Superior Windows & Doors Contractor",
-    title: "Marksman Exteriors - Beaverton Windows & Doors Contractor",
+    heading: "Beaverton's Superior Windows and Doors Contractor",
+    title: "Marksman Exteriors - Beaverton Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Beaverton, OR.",
     areaServed: "Beaverton, OR",
   },
   wilsonville: {
     name: "Wilsonville",
-    heading: "Wilsonville's Best Windows & Doors Contractor",
-    title: "Marksman Exteriors - Wilsonville Windows & Doors Contractor",
+    heading: "Wilsonville's Best Windows and Doors Contractor",
+    title: "Marksman Exteriors - Wilsonville Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Wilsonville, OR.",
     areaServed: "Wilsonville, OR",
   },
   woodburn: {
     name: "Woodburn",
-    heading: "Woodburn's Superior Windows & Doors Contractor",
-    title: "Marksman Exteriors - Woodburn Windows & Doors Contractor",
+    heading: "Woodburn's Superior Windows and Doors Contractor",
+    title: "Marksman Exteriors - Woodburn Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodburn, OR.",
     areaServed: "Woodburn, OR",
   },
   salem: {
     name: "Salem",
-    heading: "Salem's Best Windows & Doors Contractor",
-    title: "Marksman Exteriors - Salem Windows & Doors Contractor",
+    heading: "Salem's Best Windows and Doors Contractor",
+    title: "Marksman Exteriors - Salem Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Salem and surrounding areas.",
     areaServed: "Salem, OR",
   },
   albany: {
     name: "Albany",
-    heading: "Albany's Best Windows & Doors Contractor",
-    title: "Marksman Exteriors - Albany Windows & Doors Contractor",
+    heading: "Albany's Best Windows and Doors Contractor",
+    title: "Marksman Exteriors - Albany Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Albany, OR.",
     areaServed: "Albany, OR",
   },
   corvallis: {
     name: "Corvallis",
-    heading: "Corvallis' Superior Windows & Doors Contractor",
-    title: "Marksman Exteriors - Corvallis Windows & Doors Contractor",
+    heading: "Corvallis' Superior Windows and Doors Contractor",
+    title: "Marksman Exteriors - Corvallis Windows and Doors Contractor",
     description:
       "Marksman Exteriors LLC - Windows and Doors Contractor serving Corvallis, OR.",
     areaServed: "Corvallis, OR",
