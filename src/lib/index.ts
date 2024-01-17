@@ -7,7 +7,7 @@ import googleMapsIcon from "$lib/icons/google-maps.svg";
 
 export const site = {
   url: "https://marksmanexteriors.com/",
-  title: "Marksman Exteriors - Woodburn Windows & Doors Contractor",
+  title: "Marksman Exteriors - Portland to Salem Windows and Doors Contractor",
   description:
     "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodland and surrounding areas.", // xxx words
   heading: "Exceptional Windows and Doors Contractor",
