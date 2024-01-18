@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from "$app/stores";
+  // import { page } from "$app/stores";
   import { site } from "$lib";
 
   export let url: string;
