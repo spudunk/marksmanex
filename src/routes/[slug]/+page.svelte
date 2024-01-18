@@ -19,7 +19,7 @@
     ...(organizationSchema as Object),
     areaServed: data.areaServed,
   } as Organization;
-  const url = `${site.url}${data.slug}`
+  const url = `${site.url}/${data.slug}`
 </script>
 
 <SEO description={data.description} title={data.title} {url} canonical={url} domain={site.url} />

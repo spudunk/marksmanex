@@ -6,7 +6,7 @@ import facebookIcon from "$lib/icons/facebook.svg";
 import googleMapsIcon from "$lib/icons/google-maps.svg";
 
 export const site = {
-  url: "https://marksmanexteriors.com/",
+  url: "https://marksmanexteriors.com",
   title: "Marksman Exteriors - Portland to Salem Windows and Doors Contractor",
   description:
     "Marksman Exteriors LLC - Windows and Doors Contractor serving Woodburn and surrounding areas.", // xxx words
