@@ -3,16 +3,16 @@
   "name": "Marksman Exteriors",
   "short_name": "Marksman Exteriors",
   "id": "marksmanexteriors",
-  "start_url": "/",
+  "start_url": "https://marksmanexteriors.com",
   "icons": [
     {
       "src": "/favicon/favicon-16x16.png",
-      "sizes": "32x32",
+      "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/favicon-32x32.png",
-      "sizes": "16x16",
+      "src": "/favicon/favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     },
     {
