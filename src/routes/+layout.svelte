@@ -11,7 +11,7 @@
   <!--  Favicon & WebManifest -->
 
   <link rel="icon" href={`${site.url}favicon.ico`} />
-  <link
+  <!-- <link
     rel="apple-touch-icon"
     sizes="180x180"
     href={`${site.url}favicon/apple-touch-icon.png`}
@@ -27,7 +27,7 @@
     type="image/png"
     sizes="16x16"
     href={`${site.url}favicon/favicon-16x16.png`}
-  />
+  /> -->
   <link rel="manifest" href={`${site.url}site.webmanifest`} />
 </svelte:head>
 
