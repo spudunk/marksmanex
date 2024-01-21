@@ -78,12 +78,12 @@
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Product Lines</h2>
       {#each site.productLines as prod, i (i)}
-      <h3 class="text-xl mb-2 mt-4">{prod.name}</h3>
+      <h3 class="text-xl font-bold mb-2 mt-8">{prod.name}</h3>
       <p>{prod.description}</p>
       {#if prod.catalogs}
-        <ul class="ml-4 flex flex-col md:flex-row flex-wrap gap-4">
+        <ul class="mt-4 flex flex-col md:flex-row flex-wrap gap-4">
           {#each prod.catalogs as cat}
-            <li><a class="link" href={cat.link}>{cat.title}</a></li>
+            <li><a class="link" target="_blank" href={cat.link}>{cat.title}</a></li>
           {/each}
         </ul>
       {/if}
