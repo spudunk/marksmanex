@@ -15,15 +15,21 @@
 
   import { gallery, site } from "$lib";
   import { organizationSchema, websiteSchema } from "$lib/schemas";
-  
+
   const orgSchema = {
     ...(organizationSchema as Object),
     areaServed: data.areaServed,
   } as Organization;
-  const url = `${site.url}/${data.slug}`
+  const url = `${site.url}/${data.slug}`;
 </script>
 
-<SEO description={data.description} title={data.title} {url} canonical={url} domain={site.url} />
+<SEO
+  description={data.description}
+  title={data.title}
+  {url}
+  canonical={url}
+  domain={site.url}
+/>
 <LdTag schema={orgSchema} />
 <LdTag schema={websiteSchema} />
 
@@ -66,9 +72,7 @@
   <section id="services" class="">
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Benefits</h2>
-      <p>
-        {@html site.services[0]}
-      </p>
+      <p>{@html site.services[0]}</p>
     </div>
   </section>
 

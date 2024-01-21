@@ -29,11 +29,11 @@ export const site: SiteData = {
       description: "(((About milgard and their product offering)))",
       catalogs: [
         {
-          title: "Milgard Windows Catalog",
+          title: "Windows Catalog",
           link: "https://www.milgard.com/windows",
         },
         {
-          title: "Milgard Patio Doors Catalog",
+          title: "Patio Doors Catalog",
           link: "https://www.milgard.com/patio-doors",
         },
       ],
@@ -43,20 +43,20 @@ export const site: SiteData = {
       description: "(((about jeldwen)))",
       catalogs: [
         {
-          title: "Jeld-wen Windows Catalog",
+          title: "Windows Catalog",
           link: "https://www.jeld-wen.com/en-us/products/windows",
         },
         {
-          title: "Jeld-wen Exterior Doors Catalog",
+          title: "Patio Doors Catalog",
+          link: "https://www.jeld-wen.com/en-us/products/patio-doors",
+        },
+        {
+          title: "Exterior Doors Catalog",
           link: "https://www.jeld-wen.com/en-us/products/exterior-doors",
         },
         {
-          title: "Jeld-wen Interior Doors Catalog",
+          title: "Interior Doors Catalog",
           link: "https://www.jeld-wen.com/en-us/products/interior-doors",
-        },
-        {
-          title: "Jeld-wen Patio Doors Catalog",
-          link: "https://www.jeld-wen.com/en-us/products/patio-doors",
         },
       ],
     },
@@ -65,11 +65,11 @@ export const site: SiteData = {
       description: "(((about Simonton)))",
       catalogs: [
         {
-          title: "Simonton Windows Catalog",
+          title: "Windows Catalog",
           link: "https://www.simonton.com/windows/",
         },
         {
-          title: "Simonton Patio Doors Catalog",
+          title: "Patio Doors Catalog",
           link: "https://www.simonton.com/doors/",
         },
       ],
@@ -79,7 +79,7 @@ export const site: SiteData = {
       description: "(((about Andersen)))",
       catalogs: [
         {
-          title: "Andersen Windows & Doors Catalog",
+          title: "Windows & Doors Catalog",
           link: "https://www.andersenwindows.com/windows-and-doors/",
         },
       ],
