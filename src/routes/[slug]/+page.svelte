@@ -93,7 +93,7 @@
   <section id="products" class="mb-16">
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Product Lines</h2>
-      {#each site.products.lines as prod, i (i)}
+      {#each site.products.lines as prod, i (prod.name)}
       <h3 class="text-xl font-bold mb-2 mt-8">{prod.name}</h3>
       <p>{prod.description}</p>
       {#if prod.catalogs}

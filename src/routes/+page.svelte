@@ -78,7 +78,7 @@
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Product Lines</h2>
       <p class="text-lg md:text-xl">{@html site.products.description}</p>
-      {#each site.products.lines as prod, i (i)}
+      {#each site.products.lines as prod, i (prod.name)}
         <h3 class="text-xl font-bold mb-4 mt-10">
           <img class="w-48" src={prod.logo} alt={prod.logoAlt} />
         </h3>
