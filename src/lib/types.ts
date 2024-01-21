@@ -6,6 +6,8 @@ type ProductLine = {
     link: string;
   }[];
   referral?: string;
+  logo?: string;
+  logoAlt?: string;
 };
 
 type Company = {
@@ -40,7 +42,10 @@ export type SiteData = {
   subheading: string;
   about: string[];
   services: string[];
-  productLines: ProductLine[];
+  products: {
+    description: string;
+    lines: ProductLine[];
+  }
   company: Company;
   license: { text: string; url: string };
   socials: Social[];

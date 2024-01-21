@@ -4,6 +4,10 @@ import type { Locations, SiteData, ImageGallery } from "$lib/types";
 // import googleMapsIcon from "$lib/icons/google-maps.svg";
 import yelpIcon from "$lib/icons/yelp_burst.svg";
 import facebookIcon from "$lib/icons/facebook.svg";
+import milgardLogo from "$lib/icons/milgard.svg";
+import jeldwenLogo from "$lib/icons/jeldwen.svg";
+import andersenLogo from "$lib/icons/andersen.svg";
+import simontonLogo from "$lib/icons/simonton.png";
 
 export const site: SiteData = {
   url: "https://marksmanexteriors.com",
@@ -23,10 +27,14 @@ export const site: SiteData = {
   services: [
     "Windows and doors not only provide aesthetics but also serve as critical points of insulation and protection against external elements. Improper installation can lead to air and water leakages, causing energy inefficiency, increased utility bills, and damage to the interior. A professional installation guarantees a tight, secure fit, maximizing energy efficiency and preventing moisture infiltration.",
   ],
-  productLines: [
+  products:{
+    description: "We work with products from several major windows and doors manufacturers. We can find a product that meets your specific style and needs.",
+    lines: [
     {
       name: "Milgard",
       description: "Milgard offers a wide range of high-quality windows and patio doors designed to enhance the beauty and energy efficiency of any home. With their innovative designs and durable materials, Milgard windows are built to last and provide superior performance. Whether you're looking for traditional or contemporary styles, Milgard has the perfect windows to suit your needs and complement your home's aesthetic.",
+      logo: milgardLogo,
+      logoAlt: "Milgard Windows and Doors",
       catalogs: [
         {
           title: "Windows Catalog",
@@ -41,6 +49,8 @@ export const site: SiteData = {
     {
       name: "Jeld-wen",
       description: "Jeld-Wen offers a wide range of high-quality windows and doors that are perfect for any home. Their product offerings include energy-efficient windows that help lower utility bills and keep your home comfortable. With a variety of stylish and durable options, Jeld-Wen windows and doors provide both functionality and beauty to enhance any space.",
+      logo: jeldwenLogo,
+      logoAlt: "Jeld-wen Windows and Doors",
       catalogs: [
         {
           title: "Windows Catalog",
@@ -63,6 +73,8 @@ export const site: SiteData = {
     {
       name: "Simonton",
       description: "Simonton windows and doors offer a wide selection of high-quality and energy-efficient options for homeowners. Whether you're looking for double-hung windows, sliding doors, or bay windows, Simonton has designs that can enhance the aesthetic appeal and functionality of any home. Their products are built to last, providing durability and security while also offering various customization options to suit your personal style.",
+      logo: simontonLogo,
+      logoAlt: "Simonton Windows and Doors",
       catalogs: [
         {
           title: "Windows Catalog",
@@ -77,6 +89,8 @@ export const site: SiteData = {
     {
       name: "Andersen",
       description: "Andersen windows and doors offer a wide selection of high-quality products for homeowners. With a focus on durability and energy efficiency, their windows and doors come in various styles, materials, and sizes to suit every home. The company has been in operation for over a century, consistently providing reliable and innovative solutions that enhance the beauty, comfort, and safety of people's homes.",
+      logo: andersenLogo,
+      logoAlt: "Andersen Windows and Doors",
       catalogs: [
         {
           title: "Windows & Doors Catalog",
@@ -84,7 +98,7 @@ export const site: SiteData = {
         },
       ],
     },
-  ],
+  ]},
   company: {
     name: "Marksman Exteriors",
     legalName: "Marksman Exteriors LLC",
