@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { imagePath, type Image } from "$lib";
   import { onMount } from "svelte";
   import ArrowButton from "./ArrowButton.svelte";
-  export let images: Image[];
+  import type { ImageGallery } from "./types";
   export let debug = false;
+  export let gallery: ImageGallery ;
 
   let carousel: HTMLDivElement;
   let container: HTMLDivElement;
@@ -97,7 +97,7 @@
     bind:this={carousel}
     on:scroll={handleScroll}
   >
-    {#each images as image, index (image.id)}
+    {#each gallery.images as image, index (image.id)}
       <!-- Image Container -->
       <button
         class="relative block min-w-fit ml-2 snap-center"
@@ -115,8 +115,8 @@
         {/if}
         <img
           loading="lazy"
-          src={`${imagePath}/${image.id}/h=320`}
-          srcset={`${imagePath}/${image.id}/h=320, ${imagePath}/${image.id}/h=640 2x`}
+          src={`${gallery.basePath}/${image.id}/h=320`}
+          srcset={`${gallery.basePath}/${image.id}/h=320, ${gallery.basePath}/${image.id}/h=640 2x`}
           alt={image.alt}
           id={image.id}
           class="h-60 md:h-72 lg:h-80 rounded object-cover"
@@ -139,7 +139,7 @@
   >
     <img
       class="max-w-full max-h-screen p-2"
-      src={`${imagePath}/${images[selected].id}/public`}
+      src={`${gallery.basePath}/${gallery.images[selected].id}/public`}
       alt={""}
     />
   </button>

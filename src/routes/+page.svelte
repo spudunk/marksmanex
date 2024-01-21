@@ -6,7 +6,8 @@
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import CfImage from "$lib/CfImage.svelte";
-  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
+  import { site, gallery } from "$lib";
+  import { organizationSchema, websiteSchema } from "$lib/schemas";
 </script>
 
 <MetaTags canonical={site.url} url={site.url} domain={site.url} />
@@ -50,12 +51,10 @@
     </div>
   </section>
 
-  <section id="services" class="">
+  <section id="benefits" class="">
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Benefits</h2>
-      <p>
-        {@html site.servicesCopy}
-      </p>
+      <p>{@html site.services[0]}</p>
     </div>
   </section>
 
@@ -75,10 +74,32 @@
     </div>
   </section>
 
+  <section id="products" class="mb-16">
+    <div class="container w-full">
+      <h2 class="text-3xl mb-4 mt-12 font-display">Product Lines</h2>
+      <p class="text-lg md:text-xl">{@html site.products.description}</p>
+      {#each site.products.lines as prod, i (prod.name)}
+        <h3 class="text-xl font-bold mb-4 mt-10">
+          <img class="w-48" src={prod.logo} alt={prod.logoAlt} />
+        </h3>
+        <p>{prod.description}</p>
+        {#if prod.catalogs}
+          <ul class="mt-4 flex flex-col md:flex-row flex-wrap gap-4">
+            {#each prod.catalogs as cat}
+              <li>
+                <a class="link" target="_blank" href={cat.link}>{cat.title}</a>
+              </li>
+            {/each}
+          </ul>
+        {/if}
+      {/each}
+    </div>
+  </section>
+
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <Carousel images={galleryImages} />
+      <Carousel {gallery} />
     </div>
   </section>
 

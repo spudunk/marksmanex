@@ -3,9 +3,12 @@
   <url>
     <loc>https://marksmanexteriors.com</loc>
   </url>
+
+  <!-- Location Pages -->
   <url>
     <loc>https://marksmanexteriors.com/portland</loc>
   </url>
+  <!-- 
   <url>
     <loc>https://marksmanexteriors.com/lakeoswego</loc>
   </url>
@@ -26,5 +29,6 @@
   </url>
   <url>
     <loc>https://marksmanexteriors.com/corvallis</loc>
-  </url>
+  </url> -->
+
 </urlset>

@@ -4,8 +4,6 @@
 
   export let data: PageData;
 
-  import Google from "$lib/icons/google.svg";
-  import Yelp from "$lib/icons/yelp_burst.svg";
   import SEO from "$lib/SEO/MetaTags.svelte";
   import LdTag from "$lib/SEO/LDTag.svelte";
   import Contact from "$lib/Contact.svelte";
@@ -13,16 +11,23 @@
   import Carousel from "$lib/Carousel.svelte";
   import ReviewLinks from "$lib/ReviewLinks.svelte";
 
-  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
+  import { gallery, site } from "$lib";
+  import { organizationSchema, websiteSchema } from "$lib/schemas";
 
   const orgSchema = {
     ...(organizationSchema as Object),
     areaServed: data.areaServed,
   } as Organization;
-  const url = `${site.url}/${data.slug}`
+  const url = `${site.url}/${data.slug}`;
 </script>
 
-<SEO description={data.description} title={data.title} {url} canonical={url} domain={site.url} />
+<SEO
+  description={data.description}
+  title={data.title}
+  {url}
+  canonical={url}
+  domain={site.url}
+/>
 <LdTag schema={orgSchema} />
 <LdTag schema={websiteSchema} />
 
@@ -65,9 +70,7 @@
   <section id="services" class="">
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Benefits</h2>
-      <p>
-        {@html site.servicesCopy}
-      </p>
+      <p>{@html site.services[0]}</p>
     </div>
   </section>
 
@@ -87,10 +90,27 @@
     </div>
   </section>
 
+  <section id="products" class="mb-16">
+    <div class="container w-full">
+      <h2 class="text-3xl mb-4 mt-12 font-display">Product Lines</h2>
+      {#each site.products.lines as prod, i (prod.name)}
+      <h3 class="text-xl font-bold mb-2 mt-8">{prod.name}</h3>
+      <p>{prod.description}</p>
+      {#if prod.catalogs}
+        <ul class="mt-4 flex flex-col md:flex-row flex-wrap gap-4">
+          {#each prod.catalogs as cat}
+            <li><a class="link" target="_blank" href={cat.link}>{cat.title}</a></li>
+          {/each}
+        </ul>
+      {/if}
+    {/each}
+    </div>
+  </section>
+
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <Carousel images={galleryImages} />
+      <Carousel {gallery} />
     </div>
   </section>
 
