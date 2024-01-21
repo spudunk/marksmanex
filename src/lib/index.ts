@@ -26,7 +26,7 @@ export const site: SiteData = {
   productLines: [
     {
       name: "Milgard",
-      description: "(((About milgard and their product offering)))",
+      description: "Milgard offers a wide range of high-quality windows and patio doors designed to enhance the beauty and energy efficiency of any home. With their innovative designs and durable materials, Milgard windows are built to last and provide superior performance. Whether you're looking for traditional or contemporary styles, Milgard has the perfect windows to suit your needs and complement your home's aesthetic.",
       catalogs: [
         {
           title: "Windows Catalog",
@@ -40,7 +40,7 @@ export const site: SiteData = {
     },
     {
       name: "Jeld-wen",
-      description: "(((about jeldwen)))",
+      description: "Jeld-Wen offers a wide range of high-quality windows and doors that are perfect for any home. Their product offerings include energy-efficient windows that help lower utility bills and keep your home comfortable. With a variety of stylish and durable options, Jeld-Wen windows and doors provide both functionality and beauty to enhance any space.",
       catalogs: [
         {
           title: "Windows Catalog",
@@ -62,7 +62,7 @@ export const site: SiteData = {
     },
     {
       name: "Simonton",
-      description: "(((about Simonton)))",
+      description: "Simonton windows and doors offer a wide selection of high-quality and energy-efficient options for homeowners. Whether you're looking for double-hung windows, sliding doors, or bay windows, Simonton has designs that can enhance the aesthetic appeal and functionality of any home. Their products are built to last, providing durability and security while also offering various customization options to suit your personal style.",
       catalogs: [
         {
           title: "Windows Catalog",
@@ -76,7 +76,7 @@ export const site: SiteData = {
     },
     {
       name: "Andersen",
-      description: "(((about Andersen)))",
+      description: "Andersen windows and doors offer a wide selection of high-quality products for homeowners. With a focus on durability and energy efficiency, their windows and doors come in various styles, materials, and sizes to suit every home. The company has been in operation for over a century, consistently providing reliable and innovative solutions that enhance the beauty, comfort, and safety of people's homes.",
       catalogs: [
         {
           title: "Windows & Doors Catalog",
