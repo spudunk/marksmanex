@@ -93,6 +93,7 @@ export const site: SiteData = {
     telephone: "+12182009998",
     telephoneText: "(218) 200-9998",
     address: "Woodburn, OR",
+    priceRange: "$$",
     sosLink:
       "https://egov.sos.state.or.us/br/pkg_web_name_srch_inq.show_detl?p_be_rsn=2273679&p_srce=BR_INQ&p_print=FALSE",
     foundingDate: "2000-05-01T00:00:00.000Z",

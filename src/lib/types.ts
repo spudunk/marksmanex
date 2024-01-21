@@ -17,6 +17,7 @@ type Company = {
   telephoneText: string;
   address: string;
   sosLink: string;
+  priceRange: string;
   foundingDate?: string;
 };
 

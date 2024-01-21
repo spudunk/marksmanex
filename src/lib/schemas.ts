@@ -38,4 +38,5 @@ export const organizationSchema: WithContext<Organization> = {
     ratingCount: "1",
   },
   foundingDate: site.company.foundingDate,
+  priceRange: site.company.priceRange,
 };
