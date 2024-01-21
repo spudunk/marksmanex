@@ -31,7 +31,7 @@ const config = {
       },
     }),
     prerender: {
-      entries: [...locations.map((loc) => `/${loc}`)],
+      entries: ["/", ...locations.map((loc) => `/${loc}`)],
     },
   },
 };
