@@ -111,7 +111,7 @@ export const site: SiteData = {
       link: "https://www.facebook.com/MarksmanExteriors",
       iconLabel: "Facebook Business Profile",
       reviewLink: "https://www.facebook.com/MarksmanExteriors",
-      reviewText: "Marksman Exteriors Facebook",
+      reviewText: "Facebook",
       
     },
     {
