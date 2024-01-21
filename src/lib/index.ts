@@ -64,10 +64,6 @@ export const site: SiteData = {
           title: "Exterior Doors Catalog",
           link: "https://www.jeld-wen.com/en-us/products/exterior-doors",
         },
-        {
-          title: "Interior Doors Catalog",
-          link: "https://www.jeld-wen.com/en-us/products/interior-doors",
-        },
       ],
     },
     {
