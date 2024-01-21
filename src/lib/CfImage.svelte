@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { imagePath } from "$lib";
+  import { gallery } from "$lib";
   export let type: "width" | "height" = "width";
   export let alt = "";
   export let id;
-  export let src = imagePath + id + "/public";
+  export let src = gallery.basePath + id + "/public";
   export let widths = "[360, 480, 800, 1080]";
   export let heights: string | undefined = undefined;
   export let srcWidth: string | undefined = undefined;
@@ -61,7 +61,7 @@
   if (type === "width" && widths) {
     srcSetWidthConfig = {
       id: id,
-      prefix: imagePath,
+      prefix: gallery.basePath,
       widths: JSON.parse(widths),
       srcWidth: srcWidth,
     };
@@ -71,7 +71,7 @@
   if (type === "height" && heights) {
     srcSetHeightConfig = {
       id: id,
-      prefix: imagePath,
+      prefix: gallery.basePath,
       heights: JSON.parse(heights),
       srcHeight: srcHeight,
     };

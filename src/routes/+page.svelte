@@ -6,7 +6,8 @@
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import CfImage from "$lib/CfImage.svelte";
-  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
+  import { site, gallery } from "$lib";
+  import { organizationSchema, websiteSchema } from "$lib/schemas";
 </script>
 
 <MetaTags canonical={site.url} url={site.url} domain={site.url} />
@@ -53,9 +54,7 @@
   <section id="services" class="">
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Benefits</h2>
-      <p>
-        {@html site.servicesCopy}
-      </p>
+      <p>{@html site.services[0]}</p>
     </div>
   </section>
 
@@ -78,7 +77,7 @@
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <Carousel images={galleryImages} />
+      <Carousel {gallery} />
     </div>
   </section>
 

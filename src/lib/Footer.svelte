@@ -1,5 +1,5 @@
 <script>
-  import { site, locations, socialLinks } from "$lib";
+  import { site } from "$lib";
 
   // update footer copyright year automatically
   const date = new Date();
@@ -12,13 +12,13 @@
     <nav class="w-full mb-2">
       <h3 class="font-bold font-display">Social Links</h3>
       <ul class="grid md:grid-cols-2 h-fit font-bold">
-        {#each socialLinks as social}
-          {#if social.href}
+        {#each site.socials as social (social.id)}
+          {#if social.link}
             <li>
               <a
                 class="flex items-center gap-1 py-1"
                 target="_blank"
-                href={social.href}
+                href={social.link}
               >
                 {#if social.icon}
                   <img
@@ -35,14 +35,15 @@
       </ul>
     </nav>
     <nav>
-      <h3 class="font-bold font-display">Areas Served</h3>
+      <!-- Disable locations pages -->
+      <!-- <h3 class="font-bold font-display">Areas Served</h3>
       <ul class="grid grid-cols-2 font-bold">
         {#each Object.entries(locations) as [slug, value] (slug)}
           <li>
             <a class="link text-xs py-1" href={`/${slug}`}>{value.name}</a>
           </li>
         {/each}
-      </ul>
+      </ul> -->
     </nav>
     <div
       class="pt-2 md:pt-6 flex flex-col md:text-center md:col-start-2 md:row-start-1"
