@@ -109,7 +109,10 @@ export const site: SiteData = {
       icon: facebookIcon,
       iconAlt: "Facebook Icon",
       link: "https://www.facebook.com/MarksmanExteriors",
-      label: "Facebook Business Profile",
+      iconLabel: "Facebook Business Profile",
+      reviewLink: "https://www.facebook.com/MarksmanExteriors",
+      reviewText: "Marksman Exteriors Facebook",
+      
     },
     {
       id: "yelp",
@@ -117,7 +120,9 @@ export const site: SiteData = {
       icon: yelpIcon,
       iconAlt: "Yelp Icon",
       link: "https://www.yelp.com/biz/marksman-exteriors-silverton",
-      label: "Yelp Business Profile",
+      iconLabel: "Yelp Business Profile",
+      reviewLink: "https://www.yelp.com/biz/marksman-exteriors-silverton#reviews",
+      reviewText: "Yelp Reviews",
     },
   ],
 };

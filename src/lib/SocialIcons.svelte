@@ -15,7 +15,7 @@
         }`}
         src={social.icon}
         alt={social.iconAlt}
-        aria-label={social.label}
+        aria-label={social.iconLabel}
       />
     </a>
   {/each}

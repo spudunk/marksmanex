@@ -27,7 +27,9 @@ type Social = {
   icon: string;
   iconAlt: string;
   link: string;
-  label: string;
+  iconLabel: string;
+  reviewLink?: string;
+  reviewText?: string;
 };
 
 export type SiteData = {
