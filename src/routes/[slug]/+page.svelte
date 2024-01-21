@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PageData } from "../../routes/$types";
+  import type { PageData } from "./$types";
   import type { Organization } from "schema-dts";
 
   export let data: PageData;
@@ -13,8 +13,9 @@
   import Carousel from "$lib/Carousel.svelte";
   import ReviewLinks from "$lib/ReviewLinks.svelte";
 
-  import { site, organizationSchema, websiteSchema, galleryImages } from "$lib";
-
+  import { gallery, site } from "$lib";
+  import { organizationSchema, websiteSchema } from "$lib/schemas";
+  
   const orgSchema = {
     ...(organizationSchema as Object),
     areaServed: data.areaServed,
@@ -66,7 +67,7 @@
     <div class="container w-full">
       <h2 class="text-3xl mb-4 mt-12 font-display">Benefits</h2>
       <p>
-        {@html site.servicesCopy}
+        {@html site.services[0]}
       </p>
     </div>
   </section>
@@ -90,7 +91,7 @@
   <section id="gallery">
     <div class="container">
       <h2 class="text-3xl mb-4 font-display">Gallery</h2>
-      <Carousel images={galleryImages} />
+      <Carousel {gallery} />
     </div>
   </section>
 
