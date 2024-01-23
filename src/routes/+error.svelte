@@ -5,7 +5,7 @@
 
 <Navbar />
 <main>
-  <div class="pt-20 container">
+  <div class="py-20 container">
     <h1 class="text-2xl">{$page.status}: {$page.error?.message}</h1>
   </div>
 </main>
