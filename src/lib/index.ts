@@ -141,7 +141,7 @@ export const gallery: ImageGallery = {
   // https://imagedelivery.net/XvH0UEoGmg1LgCBcC8XRgw/<image_id>/<variant_name>
   // https://[domain.com]/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/<image_id>/<variant_name>
   basePath:
-    "https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw/",
+    "https://marksmanexteriors.com/cdn-cgi/imagedelivery/XvH0UEoGmg1LgCBcC8XRgw",
   images: [
     { id: "8d1dfa22-0e73-40e2-2edf-3218fede6400", alt: "work sample" }, // 23
     { id: "69c25642-5bd1-4d6e-32df-420506cf8d00", alt: "work sample" }, // 22
