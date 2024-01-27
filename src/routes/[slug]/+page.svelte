@@ -10,6 +10,7 @@
   import Navbar from "$lib/Navbar.svelte";
   import Carousel from "$lib/Carousel.svelte";
   import ReviewLinks from "$lib/ReviewLinks.svelte";
+  import CfImage from "$lib/CfImage.svelte";
 
   import { gallery, site } from "$lib";
   import { organizationSchema, websiteSchema } from "$lib/schemas";
@@ -46,9 +47,19 @@
     id="hero"
     class="-z-10 relative min-h-[90vh] flex flex-col justify-center"
   >
-    <div
-      class="absolute top-0 left-0 bottom-0 right-0 overflow-x-clip bg-frontDoor bg-cover bg-center"
-    ></div>
+  <div
+  class="absolute top-0 left-0 bottom-0 right-0 overflow-clip flex items-center"
+>
+  <CfImage
+    alt="luxury home with new windows"
+    id="8d1dfa22-0e73-40e2-2edf-3218fede6400"
+    class="min-w-full min-h-full object-cover aspect-90-61"
+    widths="[360, 480, 800]"
+    srcWidth="1080"
+    width="1080"
+    height="732"
+  />
+</div>
     <div
       class="mix-blend-multiply backdrop-blur opacity-60 absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-b from-neutral-500 via-neutral-950 to-neutral-500"
     ></div>
