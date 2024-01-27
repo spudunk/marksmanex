@@ -3,7 +3,7 @@
   export let type: "width" | "height" = "width";
   export let alt = "";
   export let id;
-  export let src = gallery.basePath + id + "/public";
+  export let src = gallery.basePath + "/" + id + "/public";
   export let widths = "[360, 480, 800, 1080]";
   export let heights: string | undefined = undefined;
   export let srcWidth: string | undefined = undefined;
@@ -39,10 +39,10 @@
   function getSrcSetWidth(config: SrcSetWidthConfig) {
     let sources: string[] = [];
     config.widths?.forEach((width) => {
-      sources.push(`${config.prefix}${config.id}/w=${width} ${width}w`);
+      sources.push(`${config.prefix}/${config.id}/w=${width} ${width}w`);
     });
     if (srcWidth) {
-      sources.push(`${config.prefix}${config.id}/public ${config.srcWidth}w`);
+      sources.push(`${config.prefix}/${config.id}/public ${config.srcWidth}w`);
     }
     return sources.join(", ");
   }
