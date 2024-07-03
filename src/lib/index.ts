@@ -1,7 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 import type { Locations, SiteData, ImageGallery } from "$lib/types";
 // import googleIcon from "$lib/icons/google.svg";
-// import googleMapsIcon from "$lib/icons/google-maps.svg";
+import googleMapsIcon from "$lib/icons/google-maps.svg";
 import yelpIcon from "$lib/icons/yelp_burst.svg";
 import facebookIcon from "$lib/icons/facebook.svg";
 import milgardLogo from "$lib/icons/milgard.svg";
@@ -133,6 +133,14 @@ export const site: SiteData = {
       iconLabel: "Yelp Business Profile",
       reviewLink: "https://www.yelp.com/biz/marksman-exteriors-silverton#reviews",
       reviewText: "Yelp Reviews",
+    },
+    {
+      id: "googleMaps",
+      name: "Google Maps",
+      icon: googleMapsIcon,
+      iconAlt: "Google Maps Icon",
+      link: "https://maps.app.goo.gl/3Wzh9toCwDyC3W826",
+      iconLabel: "Google Maps Profile"
     },
   ],
 };
